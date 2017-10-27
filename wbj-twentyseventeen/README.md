@@ -1,5 +1,5 @@
 # Project Title
-[CLIENT NAME] Wordpress Theme
+WhistleBlowerJustice Wordpress Theme
 
 ## Table of Contents
 - [Author](#author)

@@ -4,7 +4,7 @@
  *
  * The search page showing all results
  *
- * @package tater
+ * @package whistle-blower-justice
  */
 get_header();
 

@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package tater
+ * @package whistle-blower-justice
  */
 get_header(); ?>
 <main>

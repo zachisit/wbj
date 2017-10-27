@@ -1,8 +1,8 @@
 <?php
 /**
- * tater functions and definitions
+ * whistle-blower-justice functions and definitions
  *
- * @package tater
+ * @package whistle-blower-justice
  */
 
 require_once "shortcodes/sitemap.php";
@@ -128,7 +128,7 @@ function populate_template_file($templateFile, $args = [])
  * preload entire dir
  * @return: json encoded string
  */
-function XXX_theme_preload_dir() {
+function wbj_theme_preload_dir() {
     header( 'Content-type: application/json' );
 
     $filenameArray = [];
@@ -147,8 +147,8 @@ function XXX_theme_preload_dir() {
     wp_die();//need to do at end of ajax calls to stop
 }
 
-add_action('wp_ajax_preload_images_directory', 'XXX_theme_preload_dir');
-add_action('wp_ajax_nopriv_preload_images_directory', 'XXX_theme_preload_dir');
+add_action('wp_ajax_preload_images_directory', 'wbj_theme_preload_dir');
+add_action('wp_ajax_nopriv_preload_images_directory', 'wbj_theme_preload_dir');
 
 /**
  * Convert Normal YouTube link into embed code
@@ -169,7 +169,7 @@ function youtube_url_to_embed($youtube_url) {
  * Return a featured image in a post, or return placeholder
  * @return string
  */
-function featured_image() {
+function page_header_image() {
     $tub = get_the_post_thumbnail(null, 'full');
 
     if (empty($tub)) {
