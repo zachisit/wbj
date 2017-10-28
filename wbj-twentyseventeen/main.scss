@@ -25,8 +25,11 @@
 /*--------------------------------------------------------------
 # Client Brand Colors
 --------------------------------------------------------------*/
-//colors here
+$brand_color_orange:#fff;//TODO:depreciate
+$brand_color_light_orange:#fff;//TODO:depreciate
+$text_gray:#333;
 $error_red:#FF7878;
+//@TODO:update with new clint colors
 
 /*--------------------------------------------------------------
 # Social Brand Colors
@@ -98,13 +101,13 @@ body {
     white-space:nowrap;
   }
 
-  .button_link {
+  .button {
     background:$brand_color_orange;
     padding:0.438em 1.250em;
     text-align:center;
     text-decoration:none;
     text-transform:uppercase;
-    color:white !important;
+    color:white;
     -webkit-border-radius:0.250em;
     -moz-border-radius:0.250em;
     border-radius:0.250em;
@@ -119,12 +122,6 @@ body {
     font-weight:900;
   }
 
-  .telephone_link {
-    font-weight:normal;
-    color:white;
-    text-decoration:none;
-  }
-
   .mobile_only {
     display:none;
 
@@ -135,15 +132,25 @@ body {
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
+  header {
+    float:left;
+    width:100%;
+    background:white;
+
+    #logo {
+      float:left;
+      width:auto;
+    }
+
+    #right {
+      float:right;
+
+      #search_mobile {
+        float:right;
+      }
 
   /*--------------------------------------------------------------
   # Menu - Desktop and Mobile
-  --------------------------------------------------------------*/
-
-
-
-  /*--------------------------------------------------------------
-  # Home Page Specific
   --------------------------------------------------------------*/
   #menu_close {
     display:none;
@@ -201,15 +208,192 @@ body {
       z-index:999;
     }
   }
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Home Page Specific
+  --------------------------------------------------------------*/
+  main {
+
+    .section_title {
+      font-size:2em;
+      text-align:center;
+      font-weight:100;
+      margin:0 0 1em 0;
+    }
+
+    #intro {
+      float:left;
+      width:100%;
+
+      #featured_articles {
+        width:60%;
+        float:left;
+      }
+
+      #latest_articles {
+        float:right;
+        width:38%;
+
+        h1 {
+          font-size:1.5em;
+          font-weight:200;
+          color:$text_gray;
+          margin:0 0 1em 0;
+        }
+
+        ul {
+          list-style-type:none;
+
+          li {
+            margin:0 0 0.45em 0;
+
+            a {
+              color:$text_gray;
+              text-decoration:none;
+            }
+          }
+        }
+      }
+    }
+
+    #fold_articles {
+
+      ul {//@TODO:move to possible mixin if same style used
+        list-style-type:none;
+
+        li {
+          width:30%;
+          margin:0 1em 0 0;
+
+          a {
+            color:$text_gray;
+            text-decoration:none;
+          }
+
+          &:nth-child(3), &:nth-child(6) {
+            margin:0;
+          }
+        }
+      }
+    }
+
+    #mission {
+      float:left;
+      width:100%;
+      background:url(https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_467,q_65,w_1024/v1/clients/norway/hiking_fossjuvet_forsand_norway_6fcf1221-3beb-4285-ae3d-322253a6a436.jpg) no-repeat;
+      background-attachment:fixed;
+      background-size:cover;
+      padding:3em 0;
+
+      #focus {
+        background:rgba(255,255,255,0.3);
+        padding:1em 0;
+        text-align:center;
+
+        h2 {
+          font-size:1em;
+          font-weight:200;
+        }
+
+        p {
+          line-height:1.3em;
+          font-size:1.5em;
+        }
+      }
+
+    }
+
+    #rand_articles {
+
+      ul {//@TODO:move to possible mixin if same style used
+        list-style-type:none;
+
+        li {
+          width:30%;
+          margin:0 1em 0 0;
+
+          a {
+            color:$text_gray;
+            text-decoration:none;
+          }
+
+          &:nth-child(3), &:nth-child(6) {
+            margin:0;
+          }
+        }
+      }
+    }
+
+    #video_articles {
+
+      ul {//@TODO:move to possible mixin if same style used
+        list-style-type:none;
+
+        li {
+          width:30%;
+          margin:0 1em 0 0;
+
+          a {
+            color:$text_gray;
+            text-decoration:none;
+          }
+
+          &:nth-child(3), &:nth-child(6) {
+            margin:0;
+          }
+        }
+      }
+    }
+
+    #all_articles {
+      width:100%;
+      float:left;
+
+      ul {
+        list-style-type:none;//@TODO:move these into mixin
+
+        li {
+          margin:0 0 0.45em 0;
+
+          a {
+            color:$text_gray;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+  }
 
   /*--------------------------------------------------------------
   # Content
   --------------------------------------------------------------*/
+  #content {
+    width:60%;
+    float:left;
 
+    #page_title {
+      font-size:2em;
+      margin:0 0 1em 0;
+      font-weight:100;
+      color:$text_gray;
+    }
+  }
 
   /*--------------------------------------------------------------
   # Sidebar
   --------------------------------------------------------------*/
+  #sidebar {
+    width:28%;
+    float:right;
+
+    .widgetblock {
+      border:0.3em solid gray;
+      background:white;
+      margin:0 0 2em 0;
+    }
+  }
 
   /*--------------------------------------------------------------
   # Alignments
@@ -328,7 +512,62 @@ body {
   footer {
     float:left;
     width:100%;
-    padding:1.510em 0 0 0;
+    padding:2em 0;
     margin:0;
+
+    #logo {
+      margin:1em auto;
+      width:auto;
+    }
+
+    #main {
+      float:left;
+      width:100%;
+
+      .footer_title {
+        font-weight:100;
+        color:white;
+        margin:0 0 0.5em 0;
+      }
+
+      #contact {
+        width:30%;
+        float:left;
+      }
+
+      #newsletter {
+        width:30%;
+        margin:0 0 0 2em;
+      }
+
+      #menu {
+
+        ul {
+          list-style-type:none;
+
+          li {
+            margin:0 0 0.5em 0;
+
+            a {
+              color:white;
+              text-transform:uppercase;
+            }
+          }
+        }
+      }
+    }
+
+    #bottom {
+      background:#ddd;
+      padding:1em 0;
+      float:left;
+      width:100%;
+
+      p {
+        text-align:center;
+        color:white;
+        text-transform:uppercase;
+      }
+    }
   }
 }//body/html

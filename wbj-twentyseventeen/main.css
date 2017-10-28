@@ -1,0 +1,380 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Client Brand Colors
+# Social Brand Colors
+# Responsive Style Verbiage + Mixins
+# Normalize
+# Header
+# Menu - Deskop and Mobile
+# Home Page Specific
+# Content
+# - Contact Page
+# - Online Education Plugin
+# Attorneys CPT Single Page
+# Sidebar
+# Page Specific Content
+# Sidebar
+# Alignments
+# Responsive Video Wrappers
+# Scroll To Top
+# Footer
+# Vendor Specific
+# Responsive (iphone/android)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Client Brand Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Social Brand Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Responsive Style Verbiage + Mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Home Page Specific
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Sidebar
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Alignments
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+   # Responsive Video Wrapper
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Scroll To Top
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/ }
+  body ul {
+    margin: 0;
+    padding: 0; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    margin: 0 0 0.500em 0;
+    padding: 0; }
+  body a {
+    outline: none;
+    text-decoration: none; }
+  body .wrapper {
+    margin: auto;
+    float: none;
+    max-width: 1290px;
+    display: block; }
+  body .pdf_link:after {
+    content: "";
+    background: url(images/preload/pdf_link.png) center right no-repeat;
+    padding: 0 1em 0 0.5em;
+    white-space: nowrap; }
+  body .doc_link:after {
+    content: "";
+    background: url(images/preload/word_link.png) center right no-repeat;
+    padding: 0 1em 0 0.5em;
+    white-space: nowrap; }
+  body .button {
+    background: #fff;
+    padding: 0.438em 1.250em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    -webkit-border-radius: 0.250em;
+    -moz-border-radius: 0.250em;
+    border-radius: 0.250em; }
+    body .button:hover {
+      transition: background 0.7s ease;
+      background: #fff; }
+  body .bold {
+    font-weight: 900; }
+  body .mobile_only {
+    display: none; }
+    @media only screen and (max-width: 430px) {
+      body .mobile_only {
+        display: block; } }
+  body header {
+    float: left;
+    width: 100%;
+    background: white; }
+    body header #logo {
+      float: left;
+      width: auto; }
+    body header #right {
+      float: right;
+      /*--------------------------------------------------------------
+      # Menu - Desktop and Mobile
+      --------------------------------------------------------------*/ }
+      body header #right #search_mobile {
+        float: right; }
+      body header #right #menu_close {
+        display: none;
+        float: right;
+        right: 2%;
+        outline: none;
+        border: none;
+        background: none; }
+        body header #right #menu_close::after {
+          content: "\f057";
+          font-family: "FontAwesome";
+          font-size: 2.934em;
+          color: #FF7878; }
+        @media only screen and (max-width: 430px) {
+          body header #right #menu_close {
+            display: block; } }
+      body header #right #menu_btn {
+        background: none;
+        float: right;
+        outline: none;
+        display: none;
+        margin: 0;
+        top: 4em;
+        right: 2%;
+        border: none;
+        position: absolute; }
+        body header #right #menu_btn::after {
+          content: "\f0c9";
+          font-family: "FontAwesome";
+          font-size: 2.934em;
+          color: #FF7878;
+          float: left; }
+        @media only screen and (max-width: 430px) {
+          body header #right #menu_btn {
+            display: block; } }
+      @media only screen and (max-width: 430px) {
+        body header #right #menu {
+          background: #FF7878;
+          width: 100%;
+          height: 576px;
+          float: left;
+          position: absolute;
+          top: 7%;
+          z-index: 999; } }
+  body main .section_title {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+    margin: 0 0 1em 0; }
+  body main #intro {
+    float: left;
+    width: 100%; }
+    body main #intro #featured_articles {
+      width: 60%;
+      float: left; }
+    body main #intro #latest_articles {
+      float: right;
+      width: 38%; }
+      body main #intro #latest_articles h1 {
+        font-size: 1.5em;
+        font-weight: 200;
+        color: #333;
+        margin: 0 0 1em 0; }
+      body main #intro #latest_articles ul {
+        list-style-type: none; }
+        body main #intro #latest_articles ul li {
+          margin: 0 0 0.45em 0; }
+          body main #intro #latest_articles ul li a {
+            color: #333;
+            text-decoration: none; }
+  body main #fold_articles ul {
+    list-style-type: none; }
+    body main #fold_articles ul li {
+      width: 30%;
+      margin: 0 1em 0 0; }
+      body main #fold_articles ul li a {
+        color: #333;
+        text-decoration: none; }
+      body main #fold_articles ul li:nth-child(3), body main #fold_articles ul li:nth-child(6) {
+        margin: 0; }
+  body main #mission {
+    float: left;
+    width: 100%;
+    background: url(https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_467,q_65,w_1024/v1/clients/norway/hiking_fossjuvet_forsand_norway_6fcf1221-3beb-4285-ae3d-322253a6a436.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 3em 0; }
+    body main #mission #focus {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 1em 0;
+      text-align: center; }
+      body main #mission #focus h2 {
+        font-size: 1em;
+        font-weight: 200; }
+      body main #mission #focus p {
+        line-height: 1.3em;
+        font-size: 1.5em; }
+  body main #rand_articles ul {
+    list-style-type: none; }
+    body main #rand_articles ul li {
+      width: 30%;
+      margin: 0 1em 0 0; }
+      body main #rand_articles ul li a {
+        color: #333;
+        text-decoration: none; }
+      body main #rand_articles ul li:nth-child(3), body main #rand_articles ul li:nth-child(6) {
+        margin: 0; }
+  body main #video_articles ul {
+    list-style-type: none; }
+    body main #video_articles ul li {
+      width: 30%;
+      margin: 0 1em 0 0; }
+      body main #video_articles ul li a {
+        color: #333;
+        text-decoration: none; }
+      body main #video_articles ul li:nth-child(3), body main #video_articles ul li:nth-child(6) {
+        margin: 0; }
+  body main #all_articles {
+    width: 100%;
+    float: left; }
+    body main #all_articles ul {
+      list-style-type: none; }
+      body main #all_articles ul li {
+        margin: 0 0 0.45em 0; }
+        body main #all_articles ul li a {
+          color: #333;
+          text-decoration: none; }
+  body #content {
+    width: 60%;
+    float: left; }
+    body #content #page_title {
+      font-size: 2em;
+      margin: 0 0 1em 0;
+      font-weight: 100;
+      color: #333; }
+  body #sidebar {
+    width: 28%;
+    float: right; }
+    body #sidebar .widgetblock {
+      border: 0.3em solid gray;
+      background: white;
+      margin: 0 0 2em 0; }
+  body .alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em; }
+    @media only screen and (max-width: 430px) {
+      body .alignleft {
+        width: 100%;
+        height: auto;
+        margin: 0; } }
+  body .alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em; }
+    @media only screen and (max-width: 430px) {
+      body .alignright {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin: 0; } }
+  body .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (max-width: 430px) {
+      body .aligncenter {
+        width: 100%;
+        height: auto; } }
+  body .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0; }
+    body .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  body #scroll_top {
+    display: block;
+    width: 100%;
+    float: right; }
+    body #scroll_top #scroll {
+      width: 50px;
+      height: 50px;
+      float: right;
+      position: relative;
+      right: 7.5%;
+      margin: 0 0 1.250em 0; }
+      @media only screen and (max-width: 430px) {
+        body #scroll_top #scroll {
+          right: 1%; } }
+      @media only screen and (min-width: 430px) and (max-width: 880px) {
+        body #scroll_top #scroll {
+          right: 1%; } }
+      body #scroll_top #scroll a {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        float: right;
+        text-decoration: none;
+        -webkit-border-radius: 0.273em;
+        -moz-border-radius: 0.273em;
+        border-radius: 0.273em; }
+        body #scroll_top #scroll a::after {
+          content: "\f0d8";
+          font-family: "FontAwesome";
+          font-size: 2.934em;
+          color: white;
+          text-align: center;
+          font-weight: 100;
+          float: left;
+          margin: 0.035em 0 0 0.250em; }
+        body #scroll_top #scroll a:hover {
+          transition: background 0.7s ease;
+          background: #fff; }
+  body footer {
+    float: left;
+    width: 100%;
+    padding: 2em 0;
+    margin: 0; }
+    body footer #logo {
+      margin: 1em auto;
+      width: auto; }
+    body footer #main {
+      float: left;
+      width: 100%; }
+      body footer #main .footer_title {
+        font-weight: 100;
+        color: white;
+        margin: 0 0 0.5em 0; }
+      body footer #main #contact {
+        width: 30%;
+        float: left; }
+      body footer #main #newsletter {
+        width: 30%;
+        margin: 0 0 0 2em; }
+      body footer #main #menu ul {
+        list-style-type: none; }
+        body footer #main #menu ul li {
+          margin: 0 0 0.5em 0; }
+          body footer #main #menu ul li a {
+            color: white;
+            text-transform: uppercase; }
+    body footer #bottom {
+      background: #ddd;
+      padding: 1em 0;
+      float: left;
+      width: 100%; }
+      body footer #bottom p {
+        text-align: center;
+        color: white;
+        text-transform: uppercase; }
+
+/*# sourceMappingURL=main.css.map */
