@@ -15,7 +15,7 @@
     </div>
     <button id="menu_btn"></button>
     <div id="right">
-        <div id="search_mobile">
+        <div id="search">
             <?php get_search_form(); ?>
         </div>
         <div id="menu">

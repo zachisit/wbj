@@ -16,12 +16,12 @@
  * Standard Slider Usage
  */
 jQuery(document).ready(function($){
-    $('.slick_slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        dots: true,
-        arrows: false,
-        autoplaySpeed: 5500
+    $('#featured_article_slider').slick({
+        slidesToShow:1,
+        slidesToScroll:1,
+        autoplay:true,
+        dots:true,
+        arrows:false,
+        autoplaySpeed:5500
     });
 });

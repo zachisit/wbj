@@ -37,7 +37,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -67,13 +67,15 @@ body {
     padding: 0; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     margin: 0 0 0.500em 0;
-    padding: 0; }
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; }
   body a {
     outline: none;
     text-decoration: none; }
   body .wrapper {
     margin: auto;
     float: none;
+    width: 80%;
     max-width: 1290px;
     display: block; }
   body .pdf_link:after {
@@ -119,6 +121,8 @@ body {
       # Menu - Desktop and Mobile
       --------------------------------------------------------------*/ }
       body header #right #search_mobile {
+        display: none; }
+      body header #right #search {
         float: right; }
       body header #right #menu_close {
         display: none;
@@ -209,7 +213,9 @@ body {
     body main #mission #focus {
       background: rgba(255, 255, 255, 0.3);
       padding: 1em 0;
-      text-align: center; }
+      text-align: center;
+      width: 70%;
+      margin: auto; }
       body main #mission #focus h2 {
         font-size: 1em;
         font-weight: 200; }

@@ -28,7 +28,7 @@ WhistleBlowerJustice Wordpress Theme
 
 ## Theme Fonts
 * To save server space and user load time, we use Google Fonts. The following are the client approved fonts this theme relies on. Fallback font will be sans-serif.
-* Google Fonts '[FONT-NAME]' for [FONT-USES-ON-SITE] - https://fonts.google.com/specimen/[FULL-FONT-URL]
+* Google Fonts [Montserrat](https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat:300,300i,400,400i,500,500i,600,700) for section titles, [Lora](https://fonts.google.com/specimen/Lora?selection.family=Lora:400,400i,700) for second level section titles, and [Open Sans](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans:400,400i,600,700,800) for body - http://brandmark.io/font-generator/?family=Montserrat:500-Lora:italic-Open+Sans:regular
 
 ## Image Preloading
 * Theme utilizing preloading of any files placed inside the theme/images/preload directory. Refer to file documentation on safe-use.

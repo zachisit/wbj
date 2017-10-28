@@ -63,7 +63,7 @@ $medium_desktop_size:"only screen and (min-width:881px) and (max-width:1300px)";
 body {
   margin:0;
   padding:0;
-  font-family:sans-serif;
+  font-family:'Open Sans', sans-serif;
 
   ul {
     margin:0;
@@ -73,6 +73,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     margin:0 0 0.500em 0;
     padding:0;
+    font-family:'Montserrat', sans-serif;
   }
 
   a {
@@ -83,6 +84,7 @@ body {
   .wrapper {
     margin:auto;
     float:none;
+    width:80%;
     max-width:1290px;
     display:block;
   }
@@ -146,6 +148,10 @@ body {
       float:right;
 
       #search_mobile {
+        display:none;
+      }
+
+      #search {
         float:right;
       }
 
@@ -230,6 +236,10 @@ body {
       #featured_articles {
         width:60%;
         float:left;
+
+        #featured_article_slider {
+
+        }
       }
 
       #latest_articles {
@@ -291,6 +301,8 @@ body {
         background:rgba(255,255,255,0.3);
         padding:1em 0;
         text-align:center;
+        width:70%;
+        margin:auto;
 
         h2 {
           font-size:1em;
