@@ -10,21 +10,22 @@
 <body>
 
 <header>
-    <div id="logo">
-        <a href="<?php echo get_home_url(); ?>" title="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/preload/logo.png" alt="<?php echo get_bloginfo( 'name' ); ?> - Home" /></a>
-    </div>
-    <button id="menu_btn"></button>
-    <div id="right">
-        <div id="search">
-            <?php get_search_form(); ?>
+    <div class="wrapper">
+        <div id="logo">
+            <a href="<?php echo get_home_url(); ?>" title="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/preload/logo.png" alt="<?php echo get_bloginfo( 'name' ); ?> - Home" /></a>
         </div>
-        <div id="menu">
-            <button id="menu_close"></button>
-            <div id="search_mobile">
+        <button id="menu_btn"></button>
+        <div id="right">
+            <div id="search">
                 <?php get_search_form(); ?>
             </div>
-            <?php wp_nav_menu( [ 'theme_location' => 'header_menu' ] ); ?>
+            <div id="menu">
+                <button id="menu_close"></button>
+                <div id="search_mobile">
+                    <?php get_search_form(); ?>
+                </div>
+                <?php wp_nav_menu( [ 'theme_location' => 'header_menu' ] ); ?>
+            </div>
         </div>
     </div>
-
 </header>

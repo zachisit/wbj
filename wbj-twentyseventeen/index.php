@@ -6,7 +6,10 @@
  *
  * @package whistle-blower-justice
  */
-get_header(); ?>
+get_header();
+//@TODO:page is riddled w/same query to output posts. make function to spit all this out and allow vars to select type, number of posts to show, category, nd if random post category
+//@TODO: change get_the_post_thumbnail() to function to output fallback
+?>
 
 <main>
     <div id="intro">
@@ -24,7 +27,7 @@ get_header(); ?>
                             <li>
                                 <?=get_the_post_thumbnail() ?>
                                 <div class="text_box">
-                                    <div class="title"><a href="'. get_the_permalink() .'" title="'. get_the_title(). '">'. get_the_title(). '</a></div>
+                                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
                                 </div>
                             </li>
                         <?php endwhile; wp_reset_query();
@@ -38,14 +41,14 @@ get_header(); ?>
                 <ul>
                     <?php $query = new WP_Query( [
                         'post_type' => 'post',
-                        'posts_per_page' => 8,
+                        'posts_per_page' => 7,
                         'category_name' => 'Latest News'
                     ] );
 
                     if ( $query->have_posts() ) :
-                        while ( $query->have_posts() ) : $query->the_post();
-                            echo '<li><div class="date">'. get_the_date(m .'.'.d.'.'.Y) .'</div><div class="title"><a href="'. get_the_permalink() .'" title="'. get_the_title(). '">'. get_the_title(). '</a></div></li>';
-                        endwhile; wp_reset_query();
+                        while ( $query->have_posts() ) : $query->the_post(); ?>
+                    <li><div class="date"><?=get_the_date(m .d.Y) ?></div><div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div></li>
+                        <?php endwhile; wp_reset_query();
                     else :
                         echo "<center>Sorry. But I do not see any posts in the 'Latest News' category</center>";
                     endif ?>
@@ -64,19 +67,24 @@ get_header(); ?>
                 ] );
 
                 if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post();
-                        echo '<li><div class="date">'. get_the_date(m .'.'.d.'.'.Y) .'</div><div class="title"><a href="'. get_the_permalink() .'" title="'. get_the_title(). '">'. get_the_title(). '</a></div></li>';
-                    endwhile; wp_reset_query();
-                else :
-                    echo "<center>Sorry. But I do not see any posts in the 'Fold Articles' category</center>";
-                endif ?>
+                    while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <li>
+                            <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">
+                                <?=get_the_post_thumbnail() ?>
+                            <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                            <?php endwhile; wp_reset_query();
+                            else :
+                                echo "<center>Sorry. But I do not see any posts in the 'Fold Articles' category</center>";
+                            endif ?>
+                            </a>
+                        </li>
             </ul>
         </div>
     </div>
     <div id="mission">
         <div id="focus">
-            <h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h2>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+            <h2>Sed ut perspiciatis unde omnis</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Aenean hendrerit quis mi nec congue. Suspendisse fringilla ullamcorper lacus, a bibendum lectus mollis quis. Praesent sed orci et nisi malesuada viverra quis sit amet turpis. Sed vulputate nisi magna, in bibendum metus viverra ac. Curabitur mollis vitae nibh eu cursus.</p>
             <a class="button" href="" title="">Learn More</a>
         </div>
     </div>
@@ -91,12 +99,17 @@ get_header(); ?>
                 ] );
 
                 if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post();
-                        echo '<li><div class="date">'. get_the_date(m .'.'.d.'.'.Y) .'</div><div class="title"><a href="'. get_the_permalink() .'" title="'. get_the_title(). '">'. get_the_title(). '</a></div></li>';
-                    endwhile; wp_reset_query();
-                else :
-                    echo "<center>Sorry. But I do not see any posts in the 'Fold Articles' category</center>";
-                endif ?>
+                    while ( $query->have_posts() ) : $query->the_post(); ?>
+                <li>
+                    <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">
+                        <?=get_the_post_thumbnail() ?>
+                        <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                        <?php endwhile; wp_reset_query();
+                        else :
+                            echo "<center>Sorry. But I do not see any posts in any category</center>";
+                        endif ?>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -106,17 +119,20 @@ get_header(); ?>
             <ul>
                 <?php $query = new WP_Query( [
                     'post_type' => 'post',
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 3,
                     'category_name' => 'Video Article'
                 ] );
 
                 if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post();
-                        echo '<li><div class="date">'. get_the_date(m .'.'.d.'.'.Y) .'</div><div class="title"><a href="'. get_the_permalink() .'" title="'. get_the_title(). '">'. get_the_title(). '</a></div></li>';
-                    endwhile; wp_reset_query();
+                    while ( $query->have_posts() ) : $query->the_post(); ?>
+                <li>
+                    <?=get_the_post_thumbnail() ?>
+                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                <?php endwhile; wp_reset_query();
                 else :
                     echo "<center>Sorry. But I do not see any posts in the 'Video Article' category</center>";
                 endif ?>
+                </li>
             </ul>
         </div>
     </div>
@@ -124,19 +140,25 @@ get_header(); ?>
         <div class="wrapper">
             <h2 class="section_title">Et harum quidem rerum facilis</h2>
             <ul>
-                <?php $query = new WP_Query( [
+                <?php
+                //@TODO: turn into slider
+                $query = new WP_Query( [
                     'post_type' => 'post',
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 6,
                     'orderby' => 'post_date',
                 ] );
 
                 if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post();
-                        echo '<li><div class="date">'. get_the_date(m .'.'.d.'.'.Y) .'</div><div class="title"><a href="'. get_the_permalink() .'" title="'. get_the_title(). '">'. get_the_title(). '</a></div></li>';
-                    endwhile; wp_reset_query();
+                    while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <li>
+                            <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                            <div class="excerpt"><?=wp_trim_words( get_the_content(), 100, '...' );?></div>
+                            <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">read more</a>
+                    <?php endwhile; wp_reset_query();
                 else :
                     echo "<center>Sorry. But I do not see any posts in the 'Video Article' category</center>";
                 endif ?>
+                        </li>
             </ul>
         </div>
     </div>

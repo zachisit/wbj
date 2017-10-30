@@ -38,6 +38,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  background: #081B33;
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -70,7 +71,8 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif; }
   body a {
-    outline: none;
+    color: #D14431;
+    font-weight: 500;
     text-decoration: none; }
   body .wrapper {
     margin: auto;
@@ -89,18 +91,19 @@ body {
     padding: 0 1em 0 0.5em;
     white-space: nowrap; }
   body .button {
-    background: #fff;
+    background: #D14431;
     padding: 0.438em 1.250em;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: #FFFFFF;
     -webkit-border-radius: 0.250em;
     -moz-border-radius: 0.250em;
     border-radius: 0.250em; }
     body .button:hover {
       transition: background 0.7s ease;
-      background: #fff; }
+      background: #081B33;
+      color: #FFFFFF; }
   body .bold {
     font-weight: 900; }
   body .mobile_only {
@@ -111,7 +114,8 @@ body {
   body header {
     float: left;
     width: 100%;
-    background: white; }
+    background: #081B33;
+    padding: 2em 0; }
     body header #logo {
       float: left;
       width: auto; }
@@ -123,7 +127,8 @@ body {
       body header #right #search_mobile {
         display: none; }
       body header #right #search {
-        float: right; }
+        float: right;
+        margin: 0 0 1em 0; }
       body header #right #menu_close {
         display: none;
         float: right;
@@ -167,91 +172,205 @@ body {
           position: absolute;
           top: 7%;
           z-index: 999; } }
+      body header #right #menu .menu {
+        float: left; }
+        body header #right #menu .menu ul {
+          list-style-type: none; }
+          body header #right #menu .menu ul li {
+            display: inline;
+            margin: 0 1em 0 0; }
+            body header #right #menu .menu ul li a {
+              font-weight: 100; }
   body main .section_title {
-    font-size: 2em;
+    font-size: 2.3em;
     text-align: center;
     font-weight: 100;
-    margin: 0 0 1em 0; }
+    margin: 0 0 1em 0;
+    color: #FFFFFF; }
   body main #intro {
     float: left;
-    width: 100%; }
+    width: 100%;
+    margin: 0 0 3em 0; }
     body main #intro #featured_articles {
       width: 60%;
       float: left; }
+      body main #intro #featured_articles #featured_article_slider li {
+        overflow: hidden; }
+        body main #intro #featured_articles #featured_article_slider li img {
+          width: 100%;
+          height: auto; }
     body main #intro #latest_articles {
       float: right;
-      width: 38%; }
+      width: 38%;
+      background: #FFFFFF;
+      min-height: 550px;
+      height: 550px;
+      max-height: 550px; }
       body main #intro #latest_articles h1 {
         font-size: 1.5em;
-        font-weight: 200;
-        color: #333;
-        margin: 0 0 1em 0; }
+        font-weight: 400;
+        color: #081B33;
+        margin: 0.5em 0 0.5em 1em; }
       body main #intro #latest_articles ul {
-        list-style-type: none; }
+        list-style-type: none;
+        margin: 0 2em 0 1.5em; }
         body main #intro #latest_articles ul li {
-          margin: 0 0 0.45em 0; }
+          margin: 0 0 0.45em 0;
+          padding: 0 0 0.44em 0;
+          border-bottom: 0.2em dotted #9CA4AD; }
+          body main #intro #latest_articles ul li .date {
+            font-weight: 500;
+            margin: 0 1em 0 0;
+            display: inline-block; }
+          body main #intro #latest_articles ul li .title {
+            font-weight: 100;
+            display: inline; }
           body main #intro #latest_articles ul li a {
-            color: #333;
+            color: #D14431;
             text-decoration: none; }
-  body main #fold_articles ul {
-    list-style-type: none; }
-    body main #fold_articles ul li {
-      width: 30%;
-      margin: 0 1em 0 0; }
-      body main #fold_articles ul li a {
-        color: #333;
-        text-decoration: none; }
-      body main #fold_articles ul li:nth-child(3), body main #fold_articles ul li:nth-child(6) {
-        margin: 0; }
+          body main #intro #latest_articles ul li:last-child {
+            border-bottom: none; }
+  body main #fold_articles {
+    width: 100%;
+    float: left; }
+    body main #fold_articles ul {
+      list-style-type: none; }
+      body main #fold_articles ul li {
+        width: 30%;
+        margin: 0 4em 0 0;
+        float: left; }
+        body main #fold_articles ul li img {
+          width: 100%;
+          height: auto; }
+          body main #fold_articles ul li img:hover {
+            opacity: 0.6;
+            transition: opacity 0.7s ease; }
+        body main #fold_articles ul li a {
+          color: #D14431;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1.1em; }
+        body main #fold_articles ul li:nth-child(2), body main #fold_articles ul li:nth-child(5) {
+          margin: 0; }
+        body main #fold_articles ul li:nth-child(3), body main #fold_articles ul li:nth-child(6) {
+          margin: 0;
+          float: right; }
+        body main #fold_articles ul li .title {
+          min-height: 80px;
+          margin: 0 0 1em 0;
+          max-height: 80px;
+          text-align: center; }
   body main #mission {
     float: left;
     width: 100%;
     background: url(https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_467,q_65,w_1024/v1/clients/norway/hiking_fossjuvet_forsand_norway_6fcf1221-3beb-4285-ae3d-322253a6a436.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding: 3em 0; }
+    padding: 7em 0; }
     body main #mission #focus {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 1em 0;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 2em;
       text-align: center;
       width: 70%;
       margin: auto; }
       body main #mission #focus h2 {
-        font-size: 1em;
-        font-weight: 200; }
+        font-size: 2em;
+        font-weight: 200;
+        text-transform: uppercase; }
       body main #mission #focus p {
-        line-height: 1.3em;
-        font-size: 1.5em; }
-  body main #rand_articles ul {
-    list-style-type: none; }
-    body main #rand_articles ul li {
-      width: 30%;
-      margin: 0 1em 0 0; }
-      body main #rand_articles ul li a {
-        color: #333;
-        text-decoration: none; }
-      body main #rand_articles ul li:nth-child(3), body main #rand_articles ul li:nth-child(6) {
-        margin: 0; }
-  body main #video_articles ul {
-    list-style-type: none; }
-    body main #video_articles ul li {
-      width: 30%;
-      margin: 0 1em 0 0; }
-      body main #video_articles ul li a {
-        color: #333;
-        text-decoration: none; }
-      body main #video_articles ul li:nth-child(3), body main #video_articles ul li:nth-child(6) {
-        margin: 0; }
+        line-height: 1.8em;
+        font-size: 1.1em;
+        margin: 2em 0; }
+  body main #rand_articles {
+    float: left;
+    width: 100%;
+    background: #D14431;
+    padding: 3em 0; }
+    body main #rand_articles ul {
+      list-style-type: none; }
+      body main #rand_articles ul li {
+        width: 30%;
+        margin: 0 4em 0 0;
+        float: left; }
+        body main #rand_articles ul li img {
+          width: 100%;
+          height: auto; }
+          body main #rand_articles ul li img:hover {
+            opacity: 0.6;
+            transition: opacity 0.7s ease; }
+        body main #rand_articles ul li a {
+          color: #FFFFFF;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1.1em; }
+        body main #rand_articles ul li:nth-child(2), body main #rand_articles ul li:nth-child(5) {
+          margin: 0; }
+        body main #rand_articles ul li:nth-child(3), body main #rand_articles ul li:nth-child(6) {
+          margin: 0;
+          float: right; }
+        body main #rand_articles ul li .title {
+          min-height: 80px;
+          margin: 0 0 1em 0;
+          max-height: 80px;
+          text-align: center; }
+  body main #video_articles {
+    float: left;
+    width: 100%;
+    margin: 3em 0; }
+    body main #video_articles ul {
+      list-style-type: none; }
+      body main #video_articles ul li {
+        width: 30%;
+        margin: 0 4em 0 0;
+        float: left; }
+        body main #video_articles ul li img {
+          width: 100%;
+          height: auto; }
+        body main #video_articles ul li a {
+          color: #D14431;
+          text-decoration: none;
+          font-size: 1.1em;
+          font-weight: 600; }
+        body main #video_articles ul li:nth-child(2) {
+          margin: 0; }
+        body main #video_articles ul li:nth-child(3) {
+          margin: 0;
+          float: right; }
+        body main #video_articles ul li .title {
+          min-height: 80px;
+          margin: 0 0 1em 0;
+          max-height: 80px;
+          text-align: center; }
   body main #all_articles {
     width: 100%;
-    float: left; }
+    float: left;
+    padding: 3em 0;
+    background: #FFFFFF; }
+    body main #all_articles .section_title {
+      color: #D14431; }
     body main #all_articles ul {
       list-style-type: none; }
       body main #all_articles ul li {
-        margin: 0 0 0.45em 0; }
+        margin: 0 0 2em 0;
+        border-bottom: 0.2em dotted #081B33;
+        padding: 0 0 0.45em 0; }
         body main #all_articles ul li a {
-          color: #333;
-          text-decoration: none; }
+          color: #D14431;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 1.1em; }
+        body main #all_articles ul li .title {
+          margin: 0 0 1em 0; }
+          body main #all_articles ul li .title a {
+            color: #081B33;
+            font-weight: 500;
+            font-size: 1.1em; }
+        body main #all_articles ul li .excerpt {
+          font-size: 1em;
+          line-height: 1.3em;
+          color: #333; }
+        body main #all_articles ul li:last-child {
+          border-bottom: none; }
   body #content {
     width: 60%;
     float: left; }
@@ -374,13 +493,15 @@ body {
             color: white;
             text-transform: uppercase; }
     body footer #bottom {
-      background: #ddd;
+      background: #9CA4AD;
       padding: 1em 0;
       float: left;
       width: 100%; }
       body footer #bottom p {
         text-align: center;
         color: white;
+        margin: 0;
+        padding: 0;
         text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
