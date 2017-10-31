@@ -17,8 +17,8 @@
 # Sidebar
 # Alignments
 # Responsive Video Wrappers
-# Scroll To Top
 # Footer
+# - Scroll To Top
 # Vendor Specific
 # Responsive (iphone/android)
 --------------------------------------------------------------*/
@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background: #081B33;
+  background: #11396B;
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -56,9 +56,6 @@ body {
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
    # Responsive Video Wrapper
-  --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  # Scroll To Top
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   # Footer
@@ -102,7 +99,7 @@ body {
     border-radius: 0.250em; }
     body .button:hover {
       transition: background 0.7s ease;
-      background: #081B33;
+      background: #11396B;
       color: #FFFFFF; }
   body .bold {
     font-weight: 900; }
@@ -114,7 +111,7 @@ body {
   body header {
     float: left;
     width: 100%;
-    background: #081B33;
+    background: #11396B;
     padding: 2em 0; }
     body header #logo {
       float: left;
@@ -128,7 +125,7 @@ body {
         display: none; }
       body header #right #search {
         float: right;
-        margin: 0 0 1em 0; }
+        margin: 0 0 2em 0; }
       body header #right #menu_close {
         display: none;
         float: right;
@@ -163,24 +160,29 @@ body {
         @media only screen and (max-width: 430px) {
           body header #right #menu_btn {
             display: block; } }
-      @media only screen and (max-width: 430px) {
-        body header #right #menu {
-          background: #FF7878;
-          width: 100%;
-          height: 576px;
+      body header #right #menu {
+        float: right;
+        clear: both; }
+        @media only screen and (max-width: 430px) {
+          body header #right #menu {
+            background: #FF7878;
+            width: 100%;
+            height: 576px;
+            float: left;
+            position: absolute;
+            top: 7%;
+            z-index: 999; } }
+        body header #right #menu .menu {
           float: left;
-          position: absolute;
-          top: 7%;
-          z-index: 999; } }
-      body header #right #menu .menu {
-        float: left; }
-        body header #right #menu .menu ul {
           list-style-type: none; }
-          body header #right #menu .menu ul li {
+          body header #right #menu .menu li {
             display: inline;
-            margin: 0 1em 0 0; }
-            body header #right #menu .menu ul li a {
-              font-weight: 100; }
+            margin: 0 1.4em 0 0; }
+            body header #right #menu .menu li a {
+              font-weight: 300;
+              font-size: 1.3em; }
+            body header #right #menu .menu li:last-child {
+              margin: 0; }
   body main .section_title {
     font-size: 2.3em;
     text-align: center;
@@ -195,21 +197,55 @@ body {
       width: 60%;
       float: left; }
       body main #intro #featured_articles #featured_article_slider li {
-        overflow: hidden; }
+        overflow: hidden;
+        position: relative; }
+        body main #intro #featured_articles #featured_article_slider li .text_box {
+          position: absolute;
+          bottom: 2em;
+          background: rgba(209, 68, 49, 0.6);
+          width: 80%;
+          margin: 0 0 0 1em;
+          padding: 3em 1em 1em 1em; }
+          body main #intro #featured_articles #featured_article_slider li .text_box .title a {
+            font-size: 1.5em;
+            color: #FFFFFF;
+            line-height: 1.7em;
+            font-weight: 500; }
         body main #intro #featured_articles #featured_article_slider li img {
           width: 100%;
           height: auto; }
+      body main #intro #featured_articles #featured_article_slider .slick-prev {
+        left: 3px;
+        z-index: 99999;
+        top: 40%; }
+        body main #intro #featured_articles #featured_article_slider .slick-prev::before {
+          content: "\f053";
+          color: white;
+          font-family: "FontAwesome";
+          padding: 0 0.5em 0 0;
+          font-size: 60px;
+          position: absolute; }
+      body main #intro #featured_articles #featured_article_slider .slick-next {
+        right: 42px;
+        top: 40%; }
+        body main #intro #featured_articles #featured_article_slider .slick-next::before {
+          content: "\f054";
+          color: white;
+          font-family: "FontAwesome";
+          padding: 0 0.5em 0 0;
+          font-size: 60px;
+          position: absolute; }
     body main #intro #latest_articles {
       float: right;
       width: 38%;
       background: #FFFFFF;
-      min-height: 550px;
-      height: 550px;
-      max-height: 550px; }
+      min-height: 546px;
+      height: 546px;
+      max-height: 546px; }
       body main #intro #latest_articles h1 {
         font-size: 1.5em;
         font-weight: 400;
-        color: #081B33;
+        color: #11396B;
         margin: 0.5em 0 0.5em 1em; }
       body main #intro #latest_articles ul {
         list-style-type: none;
@@ -218,10 +254,6 @@ body {
           margin: 0 0 0.45em 0;
           padding: 0 0 0.44em 0;
           border-bottom: 0.2em dotted #9CA4AD; }
-          body main #intro #latest_articles ul li .date {
-            font-weight: 500;
-            margin: 0 1em 0 0;
-            display: inline-block; }
           body main #intro #latest_articles ul li .title {
             font-weight: 100;
             display: inline; }
@@ -268,7 +300,7 @@ body {
     background-size: cover;
     padding: 7em 0; }
     body main #mission #focus {
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.7);
       padding: 2em;
       text-align: center;
       width: 70%;
@@ -352,7 +384,7 @@ body {
       list-style-type: none; }
       body main #all_articles ul li {
         margin: 0 0 2em 0;
-        border-bottom: 0.2em dotted #081B33;
+        border-bottom: 0.2em dotted #11396B;
         padding: 0 0 0.45em 0; }
         body main #all_articles ul li a {
           color: #D14431;
@@ -362,7 +394,7 @@ body {
         body main #all_articles ul li .title {
           margin: 0 0 1em 0; }
           body main #all_articles ul li .title a {
-            color: #081B33;
+            color: #11396B;
             font-weight: 500;
             font-size: 1.1em; }
         body main #all_articles ul li .excerpt {
@@ -372,20 +404,57 @@ body {
         body main #all_articles ul li:last-child {
           border-bottom: none; }
   body #content {
-    width: 60%;
-    float: left; }
+    width: 67%;
+    float: left;
+    padding: 1em;
+    background: white; }
     body #content #page_title {
       font-size: 2em;
       margin: 0 0 1em 0;
       font-weight: 100;
       color: #333; }
+    body #content #related_articles {
+      float: left;
+      width: 100%;
+      margin: 2em 0;
+      border-top: 0.001em solid #D14431; }
+      body #content #related_articles h3 {
+        font-size: 1.3em;
+        font-weight: 100;
+        margin: 1em 0; }
+      body #content #related_articles ul {
+        list-style-type: none; }
+        body #content #related_articles ul li {
+          margin: 0 1em 0 0;
+          width: 23%;
+          float: left; }
+          body #content #related_articles ul li img {
+            width: 100%;
+            height: auto; }
+          body #content #related_articles ul li:last-child {
+            margin: 0; }
   body #sidebar {
     width: 28%;
     float: right; }
     body #sidebar .widgetblock {
-      border: 0.3em solid gray;
+      border: 0.2em solid #333;
       background: white;
       margin: 0 0 2em 0; }
+      body #sidebar .widgetblock h2 {
+        font-weight: 100;
+        margin: 0.5em; }
+      body #sidebar .widgetblock ul {
+        margin: 0.5em;
+        list-style-type: none; }
+        body #sidebar .widgetblock ul li {
+          padding: 0 0 0.6em 0; }
+          body #sidebar .widgetblock ul li:before {
+            content: "\f111";
+            color: #4B596A;
+            font-family: "FontAwesome";
+            padding: 0;
+            font-size: 0.7em;
+            margin: 0 1em 0 0; }
   body .alignleft {
     display: inline;
     float: left;
@@ -426,72 +495,66 @@ body {
       left: 0;
       width: 100%;
       height: 100%; }
-  body #scroll_top {
-    display: block;
-    width: 100%;
-    float: right; }
-    body #scroll_top #scroll {
-      width: 50px;
-      height: 50px;
-      float: right;
-      position: relative;
-      right: 7.5%;
-      margin: 0 0 1.250em 0; }
-      @media only screen and (max-width: 430px) {
-        body #scroll_top #scroll {
-          right: 1%; } }
-      @media only screen and (min-width: 430px) and (max-width: 880px) {
-        body #scroll_top #scroll {
-          right: 1%; } }
-      body #scroll_top #scroll a {
-        background: #fff;
-        width: 100%;
-        height: 100%;
-        float: right;
-        text-decoration: none;
-        -webkit-border-radius: 0.273em;
-        -moz-border-radius: 0.273em;
-        border-radius: 0.273em; }
-        body #scroll_top #scroll a::after {
-          content: "\f0d8";
-          font-family: "FontAwesome";
-          font-size: 2.934em;
-          color: white;
-          text-align: center;
-          font-weight: 100;
-          float: left;
-          margin: 0.035em 0 0 0.250em; }
-        body #scroll_top #scroll a:hover {
-          transition: background 0.7s ease;
-          background: #fff; }
   body footer {
     float: left;
     width: 100%;
-    padding: 2em 0;
-    margin: 0; }
+    padding: 2em 0 0 0;
+    margin: 0;
+    border-top: 0.001em solid white;
+    /*--------------------------------------------------------------
+    # Scroll To Top
+    --------------------------------------------------------------*/ }
     body footer #logo {
       margin: 1em auto;
-      width: auto; }
+      width: 256px; }
     body footer #main {
       float: left;
-      width: 100%; }
+      width: 100%;
+      padding: 2em 0 4em 0; }
       body footer #main .footer_title {
-        font-weight: 100;
+        font-weight: 400;
         color: white;
         margin: 0 0 0.5em 0; }
       body footer #main #contact {
         width: 30%;
-        float: left; }
+        float: left;
+        color: white; }
+        body footer #main #contact ul {
+          list-style-type: none; }
+          body footer #main #contact ul li {
+            display: inline-block; }
+            body footer #main #contact ul li a {
+              color: white; }
       body footer #main #newsletter {
         width: 30%;
-        margin: 0 0 0 2em; }
-      body footer #main #menu ul {
-        list-style-type: none; }
-        body footer #main #menu ul li {
-          margin: 0 0 0.5em 0; }
-          body footer #main #menu ul li a {
-            color: white;
-            text-transform: uppercase; }
+        margin: 0 0 0 4em;
+        float: left; }
+        body footer #main #newsletter input {
+          border: none;
+          text-align: center;
+          font-size: 1em;
+          width: 100%;
+          margin: 0 0 0.54em 0;
+          color: #333;
+          padding: 0.5em 0; }
+        body footer #main #newsletter #mc-embedded-subscribe {
+          border: none;
+          margin: auto;
+          width: 200px;
+          display: table;
+          cursor: pointer; }
+          body footer #main #newsletter #mc-embedded-subscribe:hover {
+            background: #D14431; }
+      body footer #main #menu {
+        width: auto;
+        float: right; }
+        body footer #main #menu ul {
+          list-style-type: none; }
+          body footer #main #menu ul li {
+            margin: 0 0 0.5em 0; }
+            body footer #main #menu ul li a {
+              color: white;
+              text-transform: uppercase; }
     body footer #bottom {
       background: #9CA4AD;
       padding: 1em 0;
@@ -503,5 +566,46 @@ body {
         margin: 0;
         padding: 0;
         text-transform: uppercase; }
+    body footer.internal {
+      margin: 3em 0 0 0; }
+    body footer #scroll_to_top {
+      display: block;
+      width: 100%;
+      float: right; }
+      body footer #scroll_to_top #scroll {
+        width: 50px;
+        height: 50px;
+        float: right;
+        position: relative;
+        right: 7.5%;
+        margin: 0 0 1.250em 0;
+        background: #333; }
+        @media only screen and (max-width: 430px) {
+          body footer #scroll_to_top #scroll {
+            right: 1%; } }
+        @media only screen and (min-width: 430px) and (max-width: 880px) {
+          body footer #scroll_to_top #scroll {
+            right: 1%; } }
+        body footer #scroll_to_top #scroll a {
+          background: #D14431;
+          width: 100%;
+          height: 100%;
+          float: right;
+          text-decoration: none;
+          -webkit-border-radius: 0.273em;
+          -moz-border-radius: 0.273em;
+          border-radius: 0.273em; }
+          body footer #scroll_to_top #scroll a::after {
+            content: "\f0d8";
+            font-family: "FontAwesome";
+            font-size: 2.934em;
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            float: left;
+            margin: 0.035em 0 0 0.250em; }
+          body footer #scroll_to_top #scroll a:hover {
+            transition: background 0.7s ease;
+            background: #11396B; }
 
 /*# sourceMappingURL=main.css.map */

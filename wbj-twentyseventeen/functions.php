@@ -183,11 +183,34 @@ function page_header_image() {
     if (empty($tub)) {
         return "<img src='"
             . get_template_directory_uri()
-            . "/images/featured_image_placeholder.png' alt='"
+            . "/images/preload/featured_image_placeholder.png' alt='"
             . get_the_title()
             . "' />";
 
     } else {
         return $tub;
     }
+}
+
+/**
+ * Return Related articles
+ * used primarily on single post articles
+ * @TODO:ability to pipe in category
+ */
+function single_related_articles() {
+    $query = new WP_Query( [
+        'post_type' => 'post',
+        'posts_per_page' => 4,
+        'orderby'   => 'rand',
+    ] );
+
+    if ( $query->have_posts() ) :
+        echo '<ul>';
+        while ( $query->have_posts() ) : $query->the_post(); ?>
+            <li>
+                <?=get_the_post_thumbnail() ?>
+                <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div></li>
+        <?php endwhile; wp_reset_query();
+        echo '</ul>';
+        endif;
 }

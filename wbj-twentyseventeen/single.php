@@ -13,6 +13,10 @@ get_header(); ?>
                 <h1 id="page_title"><?=the_title()?></h1>
                 <?=the_content();
                 endwhile; ?>
+                <div id="related_articles">
+                    <h3>Related Articles</h3>
+                    <?php single_related_articles() ?>
+                </div>
             </div>
             <?php get_sidebar(); ?>
         </div>

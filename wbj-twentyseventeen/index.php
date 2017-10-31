@@ -41,13 +41,13 @@ get_header();
                 <ul>
                     <?php $query = new WP_Query( [
                         'post_type' => 'post',
-                        'posts_per_page' => 7,
+                        'posts_per_page' => 8,
                         'category_name' => 'Latest News'
                     ] );
 
                     if ( $query->have_posts() ) :
                         while ( $query->have_posts() ) : $query->the_post(); ?>
-                    <li><div class="date"><?=get_the_date(m .d.Y) ?></div><div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div></li>
+                    <li><div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div></li>
                         <?php endwhile; wp_reset_query();
                     else :
                         echo "<center>Sorry. But I do not see any posts in the 'Latest News' category</center>";

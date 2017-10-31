@@ -20,8 +20,8 @@ jQuery(document).ready(function($){
         slidesToShow:1,
         slidesToScroll:1,
         autoplay:true,
-        dots:true,
-        arrows:false,
-        autoplaySpeed:5500
+        dots:false,
+        arrows:true,
+        autoplaySpeed:5800
     });
 });
