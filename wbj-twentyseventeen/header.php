@@ -12,7 +12,7 @@
 <header>
     <div class="wrapper">
         <div id="logo">
-            <a href="<?=get_home_url(); ?>" title="Home"><img src="<?=get_template_directory_uri(); ?>/images/preload/logo.png" alt="<?=get_bloginfo( 'name' ); ?> - Home" /></a>
+            <a href="<?=get_home_url(); ?>" title="Home"><img src="<?=get_template_directory_uri(); ?>/images/preload/logo_new.png" alt="<?=get_bloginfo( 'name' ); ?> - Home" /></a>
         </div>
         <button id="menu_btn"></button>
         <div id="right">

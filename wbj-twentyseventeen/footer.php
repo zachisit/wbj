@@ -1,7 +1,7 @@
 <footer<?php if (!is_home()) echo ' class="internal"';?>>
     <div class="wrapper">
         <div id="logo"><!--@TODO:replace with footer long lngth logo-->
-            <a href="<?php echo get_home_url(); ?>" title="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/preload/logo.png" alt="<?php echo get_bloginfo( 'name' ); ?> - Home" /></a>
+            <a href="<?php echo get_home_url(); ?>" title="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/preload/logo_new.png" alt="<?php echo get_bloginfo( 'name' ); ?> - Home" /></a>
         </div>
 
         <div id="scroll_to_top"><a href="" title=""></a></div>
@@ -9,7 +9,7 @@
         <div id="main">
             <div id="contact">
                 <h3 class="footer_title">Contact</h3>
-                <p>Integer in imperdiet tellus</p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> 844-WJN-4ALL</p>
                 <p>Curabitur lobortis tellus</p>
                 <ul>
                     <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

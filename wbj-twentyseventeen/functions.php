@@ -178,18 +178,32 @@ function youtube_url_to_embed($youtube_url) {
  * @return string
  */
 function page_header_image() {
-    $tub = get_the_post_thumbnail(null, 'full');
+    /**
+     * set to only return fallback image
+     * until we set up second featured image
+     *
 
+     $tub = get_the_post_thumbnail(null, 'full');
+
+    echo '<div id="article_banner">';
     if (empty($tub)) {
-        return "<img src='"
+        echo "<img src='"
             . get_template_directory_uri()
             . "/images/preload/featured_image_placeholder.png' alt='"
             . get_the_title()
             . "' />";
 
     } else {
-        return $tub;
-    }
+        echo $tub;
+    }*/
+
+    echo '<div id="article_banner">';
+    echo "<img src='"
+        . get_template_directory_uri()
+        . "/images/preload/featured_image_placeholder.png' alt='"
+        . get_the_title()
+        . "' />";
+    echo '</div>';
 }
 
 /**
@@ -212,5 +226,31 @@ function single_related_articles() {
                 <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div></li>
         <?php endwhile; wp_reset_query();
         echo '</ul>';
+        endif;
+}
+
+/**
+ * Return Random Articles
+ *
+ * used primarily in sidebar to return list of random articles
+ *
+ * /@TODO:possibly move into shortcode
+ */
+function return_random_articles() {
+    $query = new WP_Query( [
+        'post_type' => 'post',
+        'posts_per_page' => 10,
+        'orderby'   => 'rand',
+    ] );
+
+    if ( $query->have_posts() ) :
+        echo '<ul>';
+        while ( $query->have_posts() ) : $query->the_post(); ?>
+            <li>
+                <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a>
+            </li>
+        <?php endwhile;
+        echo '</ul>';
+        wp_reset_query();
         endif;
 }
