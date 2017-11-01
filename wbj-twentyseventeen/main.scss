@@ -181,6 +181,23 @@ body {
     }
   }
 
+  .caret {
+    color:$brand_color_red;
+    text-decoration:none;
+    font-weight:500;
+    font-size:1.2em;
+    margin:0.5em 0 0 0;
+
+    &:before {
+      content:"\f0da";
+      color:$brand_color_red;
+      font-family:"FontAwesome";
+      padding:0;
+      font-size:1em;
+      margin:0 0.3em 0 0;
+    }
+  }
+
   .bold {
     font-weight:900;
   }
@@ -501,11 +518,16 @@ body {
       padding:7em 0;
 
       #focus {
-        background:rgba(255,255,255,0.7);
+        background:rgba(255,255,255,0.5);
         padding:2em;
         text-align:center;
         width:70%;
         margin:auto;
+
+        &:hover {
+          background:rgba(255,255,255,0.7);
+          transition:background 1000ms ease;
+        }
 
         h2 {
           font-size:2em;
@@ -542,8 +564,10 @@ body {
 
             &:hover {
               opacity:0.6;
-              transition:opacity 0.7s ease;
-              //@TODO:change to blue background color
+              transition:all 0.7s ease;
+              -moz-transform:scale(1.1);
+              -webkit-transform:scale(1.1);
+              transform:scale(1.1);
             }
           }
 
@@ -565,7 +589,7 @@ body {
 
           .title {
             min-height:80px;
-            margin:0 0 1em 0;
+            margin:1em 0;
             max-height:80px;
             text-align:center;
           }
@@ -597,15 +621,15 @@ body {
         li {
           margin:0 0 2em 0;
           border-bottom:0.2em dotted $brand_color_blue;
-          padding:0 0 0.45em 0;
+          padding:0 0 0.85em 0;
 
-          a {
-            color:$brand_color_red;
-            text-decoration:none;
-            font-weight:500;
-            font-size:1.1em;
-          }
+          /*@TODO: implement cross browser transitions
+          -moz-transition:color 500ms ease;
+                -webkit-transition:color 500ms ease;
+                -o-transition:color 500ms ease;
+                -ms-transition:color 500ms ease;
 
+           */
           .title {
             margin:0 0 1em 0;
 
@@ -844,14 +868,21 @@ body {
         float:left;
         color:white;
 
+        #call {
+          font-size:1.4em;
+          font-weight:700;
+        }
+
         ul {
           @include ul-type-none;
 
           li {
             display:inline-block;
+            margin:0 0.5em 0 0;
 
             a {
               color:white;
+              font-size:1em;
             }
           }
         }
@@ -869,13 +900,15 @@ body {
           width:100%;
           margin:0 0 0.54em 0;
           color:$text_gray;
-          padding:0.5em 0;
+          padding:0.5em 0 0.5em 0.5em;
         }
 
         #mc-embedded-subscribe {
           border:none;
           margin:auto;
+          text-align:center;
           width:200px;
+          color:white;
           display:table;
           cursor:pointer;
 

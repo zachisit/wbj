@@ -102,6 +102,19 @@ body {
       transition: background 0.7s ease;
       background: #11396B;
       color: #FFFFFF; }
+  body .caret {
+    color: #D14431;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin: 0.5em 0 0 0; }
+    body .caret:before {
+      content: "\f0da";
+      color: #D14431;
+      font-family: "FontAwesome";
+      padding: 0;
+      font-size: 1em;
+      margin: 0 0.3em 0 0; }
   body .bold {
     font-weight: 900; }
   body .mobile_only {
@@ -344,11 +357,14 @@ body {
     background-size: cover;
     padding: 7em 0; }
     body main #mission #focus {
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.5);
       padding: 2em;
       text-align: center;
       width: 70%;
       margin: auto; }
+      body main #mission #focus:hover {
+        background: rgba(255, 255, 255, 0.7);
+        transition: background 1000ms ease; }
       body main #mission #focus h2 {
         font-size: 2em;
         font-weight: 200;
@@ -373,7 +389,10 @@ body {
           height: auto; }
           body main #rand_articles ul li img:hover {
             opacity: 0.6;
-            transition: opacity 0.7s ease; }
+            transition: all 0.7s ease;
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
         body main #rand_articles ul li a {
           color: #FFFFFF;
           text-decoration: none;
@@ -386,7 +405,7 @@ body {
           float: right; }
         body main #rand_articles ul li .title {
           min-height: 80px;
-          margin: 0 0 1em 0;
+          margin: 1em 0;
           max-height: 80px;
           text-align: center; }
   body main #video_articles {
@@ -435,12 +454,14 @@ body {
       body main #all_articles ul li {
         margin: 0 0 2em 0;
         border-bottom: 0.2em dotted #11396B;
-        padding: 0 0 0.45em 0; }
-        body main #all_articles ul li a {
-          color: #D14431;
-          text-decoration: none;
-          font-weight: 500;
-          font-size: 1.1em; }
+        padding: 0 0 0.85em 0;
+          /*@TODO: implement cross browser transitions
+          -moz-transition:color 500ms ease;
+                -webkit-transition:color 500ms ease;
+                -o-transition:color 500ms ease;
+                -ms-transition:color 500ms ease;
+
+           */ }
         body main #all_articles ul li .title {
           margin: 0 0 1em 0; }
           body main #all_articles ul li .title a {
@@ -593,12 +614,17 @@ body {
         width: 30%;
         float: left;
         color: white; }
+        body footer #main #contact #call {
+          font-size: 1.4em;
+          font-weight: 700; }
         body footer #main #contact ul {
           list-style-type: none; }
           body footer #main #contact ul li {
-            display: inline-block; }
+            display: inline-block;
+            margin: 0 0.5em 0 0; }
             body footer #main #contact ul li a {
-              color: white; }
+              color: white;
+              font-size: 1em; }
       body footer #main #newsletter {
         width: 30%;
         margin: 0 0 0 4em;
@@ -610,11 +636,13 @@ body {
           width: 100%;
           margin: 0 0 0.54em 0;
           color: #333;
-          padding: 0.5em 0; }
+          padding: 0.5em 0 0.5em 0.5em; }
         body footer #main #newsletter #mc-embedded-subscribe {
           border: none;
           margin: auto;
+          text-align: center;
           width: 200px;
+          color: white;
           display: table;
           cursor: pointer; }
           body footer #main #newsletter #mc-embedded-subscribe:hover {

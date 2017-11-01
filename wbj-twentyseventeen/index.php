@@ -153,7 +153,7 @@ get_header();
                         <li>
                             <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
                             <div class="excerpt"><?=wp_trim_words( get_the_content(), 100, '...' );?></div>
-                            <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">read more</a>
+                            <a class="caret" href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">read more</a>
                     <?php endwhile; wp_reset_query();
                 else :
                     echo "<center>Sorry. But I do not see any posts in the 'Video Article' category</center>";
