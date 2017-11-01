@@ -222,8 +222,8 @@ function single_related_articles() {
         echo '<ul>';
         while ( $query->have_posts() ) : $query->the_post(); ?>
             <li>
-                <?=get_the_post_thumbnail() ?>
-                <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div></li>
+                <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_post_thumbnail() ?>
+                <div class="title"><?=get_the_title()?></a></div></li>
         <?php endwhile; wp_reset_query();
         echo '</ul>';
         endif;

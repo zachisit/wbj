@@ -126,8 +126,8 @@ get_header();
                 if ( $query->have_posts() ) :
                     while ( $query->have_posts() ) : $query->the_post(); ?>
                 <li>
-                    <?=get_the_post_thumbnail() ?>
-                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                    <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_post_thumbnail() ?>
+                    <div class="title"><?=get_the_title()?></a></div>
                 <?php endwhile; wp_reset_query();
                 else :
                     echo "<center>Sorry. But I do not see any posts in the 'Video Article' category</center>";

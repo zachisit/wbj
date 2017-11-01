@@ -9,7 +9,7 @@
         <div id="main">
             <div id="contact">
                 <h3 class="footer_title">Contact</h3>
-                <p id="call"><i class="fa fa-phone-square" aria-hidden="true"></i> 844-WJN-4ALL</p>
+                <p id="call">844-WJN-4ALL</p>
                 <p>Cras faucibus eu erat non sagittis. Aliquam non sem tellus. Aenean purus lacus, faucibus ac arcu a, auctor fermentum metus. </p>
                 <ul>
                     <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
