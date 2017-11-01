@@ -117,8 +117,8 @@ body {
       margin: 0 0.3em 0 0; }
   body .bold {
     font-weight: 900; }
-  body .blue {
-    background: #11396B !important; }
+  body .red {
+    background: #D14431 !important; }
   body .mobile_only {
     display: none; }
     @media only screen and (max-width: 430px) {

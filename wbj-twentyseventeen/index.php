@@ -142,7 +142,7 @@ get_header();
     <div id="newsroom">
         <div class="wrapper">
             <h2 class="section_title">Our Newsroom</h2>
-            <div class="section_title_line blue"></div>
+            <div class="section_title_line red"></div>
             <?php newsroom_block('Featured Article', 'https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg')?>
             <?php newsroom_block('Fold Articles', 'https://whistleblowerjustice.org/wp-content/uploads/2017/10/business-q-c-640-480-1.jpg')?>
             <?php newsroom_block('Latest News', 'https://whistleblowerjustice.org/wp-content/uploads/2017/04/f25b6a50-38ba-41ca-9020-3640e708a90f-large.jpeg')?>
