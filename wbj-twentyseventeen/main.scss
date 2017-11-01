@@ -996,6 +996,11 @@ body {
         margin:0;
         padding:0;
         text-transform:uppercase;
+
+        a {
+          color:$brand_color_gray;
+          font-weight:800;
+        }
       }
     }
 

@@ -785,6 +785,9 @@ body {
         margin: 0;
         padding: 0;
         text-transform: uppercase; }
+        body footer #bottom p a {
+          color: #4B596A;
+          font-weight: 800; }
     body footer.internal {
       margin: 3em 0 0 0; }
     body footer #scroll_to_top {
