@@ -250,13 +250,33 @@ body {
     #right {
       float:right;
 
+      #call {
+        font-size:1.4em;
+        font-weight:700;
+        float:right;
+        width:auto;
+        color:white;
+        padding:0;
+        margin:0;
+
+        &:before {
+          content:"\f098";
+          color:$brand_color_red;
+          font-family:"FontAwesome";
+          padding:0;
+          font-size:1em;
+          margin:0 0.5em 0 0;
+        }
+      }
+
       #search_mobile {
         display:none;
       }
 
       #search {
         float:right;
-        margin:0 0 2em 0;
+        margin:1em 0;
+        clear:both;
 
         .screen-reader-text {
           display:none;
@@ -842,11 +862,7 @@ body {
     padding:2em 0 0 0;
     margin:0;
     border-top:0.001em solid white;
-
-    #logo {
-      margin:1em auto;
-      width:400px;
-    }
+    background:$brand_color_gray;
 
     #main {
       float:left;
@@ -871,6 +887,7 @@ body {
         #call {
           font-size:1.4em;
           font-weight:700;
+          margin:1em 0 2em 2.2em;
 
           &:before {
              content:"\f098";
@@ -884,6 +901,7 @@ body {
 
         ul {
           @include ul-type-none;
+          margin:0 0 0 6em;
 
           li {
             display:inline-block;
@@ -899,7 +917,7 @@ body {
 
       #newsletter {
         width:30%;
-        margin:0 0 0 4em;
+        margin:0 0 0 7em;
         float:left;
 
         input {

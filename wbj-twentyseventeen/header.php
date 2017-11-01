@@ -16,6 +16,7 @@
         </div>
         <button id="menu_btn"></button>
         <div id="right">
+            <p id="call">844-WJN-4ALL</p>
             <div id="search">
                 <?php get_search_form(); ?>
             </div>

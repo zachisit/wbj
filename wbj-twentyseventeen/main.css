@@ -154,11 +154,27 @@ body {
       /*--------------------------------------------------------------
       # Menu - Desktop and Mobile
       --------------------------------------------------------------*/ }
+      body header #right #call {
+        font-size: 1.4em;
+        font-weight: 700;
+        float: right;
+        width: auto;
+        color: white;
+        padding: 0;
+        margin: 0; }
+        body header #right #call:before {
+          content: "\f098";
+          color: #D14431;
+          font-family: "FontAwesome";
+          padding: 0;
+          font-size: 1em;
+          margin: 0 0.5em 0 0; }
       body header #right #search_mobile {
         display: none; }
       body header #right #search {
         float: right;
-        margin: 0 0 2em 0; }
+        margin: 1em 0;
+        clear: both; }
         body header #right #search .screen-reader-text {
           display: none; }
       body header #right #menu_close {
@@ -594,12 +610,10 @@ body {
     padding: 2em 0 0 0;
     margin: 0;
     border-top: 0.001em solid white;
+    background: #4B596A;
     /*--------------------------------------------------------------
     # Scroll To Top
     --------------------------------------------------------------*/ }
-    body footer #logo {
-      margin: 1em auto;
-      width: 400px; }
     body footer #main {
       float: left;
       width: 100%;
@@ -616,7 +630,8 @@ body {
         color: white; }
         body footer #main #contact #call {
           font-size: 1.4em;
-          font-weight: 700; }
+          font-weight: 700;
+          margin: 1em 0 2em 2.2em; }
           body footer #main #contact #call:before {
             content: "\f098";
             color: #D14431;
@@ -625,7 +640,8 @@ body {
             font-size: 1em;
             margin: 0 0.5em 0 0; }
         body footer #main #contact ul {
-          list-style-type: none; }
+          list-style-type: none;
+          margin: 0 0 0 6em; }
           body footer #main #contact ul li {
             display: inline-block;
             margin: 0 0.5em 0 0; }
@@ -634,7 +650,7 @@ body {
               font-size: 1em; }
       body footer #main #newsletter {
         width: 30%;
-        margin: 0 0 0 4em;
+        margin: 0 0 0 7em;
         float: left; }
         body footer #main #newsletter input {
           border: none;
