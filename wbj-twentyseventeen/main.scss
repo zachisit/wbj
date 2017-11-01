@@ -331,6 +331,12 @@ body {
         a {
           font-weight:300;
           font-size:1.3em;
+          color:white;
+
+          &:hover {
+            color:$brand_color_red;
+            transition:color 1000ms ease;
+          }
         }
 
         &:last-child {

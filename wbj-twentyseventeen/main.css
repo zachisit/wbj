@@ -212,7 +212,11 @@ body {
             margin: 0 1.4em 0 0; }
             body header #right #menu .menu li a {
               font-weight: 300;
-              font-size: 1.3em; }
+              font-size: 1.3em;
+              color: white; }
+              body header #right #menu .menu li a:hover {
+                color: #D14431;
+                transition: color 1000ms ease; }
             body header #right #menu .menu li:last-child {
               margin: 0; }
   body main .section_title {
