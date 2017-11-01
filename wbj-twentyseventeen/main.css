@@ -469,16 +469,16 @@ body {
           margin: 1em 0;
           max-height: 80px;
           text-align: center; }
-  body main #all_articles {
+  body main #newsroom {
     width: 100%;
     float: left;
     padding: 3em 0;
     background: #FFFFFF; }
-    body main #all_articles .section_title {
+    body main #newsroom .section_title {
       color: #D14431; }
-    body main #all_articles ul {
+    body main #newsroom ul {
       list-style-type: none; }
-      body main #all_articles ul li {
+      body main #newsroom ul li {
         margin: 0 0 2em 0;
         border-bottom: 0.2em dotted #11396B;
         padding: 0 0 0.85em 0;
@@ -489,17 +489,17 @@ body {
                 -ms-transition:color 500ms ease;
 
            */ }
-        body main #all_articles ul li .title {
+        body main #newsroom ul li .title {
           margin: 0 0 1em 0; }
-          body main #all_articles ul li .title a {
+          body main #newsroom ul li .title a {
             color: #11396B;
             font-weight: 500;
             font-size: 1.3em; }
-        body main #all_articles ul li .excerpt {
+        body main #newsroom ul li .excerpt {
           font-size: 1em;
           line-height: 1.3em;
           color: #333; }
-        body main #all_articles ul li:last-child {
+        body main #newsroom ul li:last-child {
           border-bottom: none; }
   body #content {
     width: 67%;

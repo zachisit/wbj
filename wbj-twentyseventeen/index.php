@@ -139,9 +139,10 @@ get_header();
             </ul>
         </div>
     </div>
-    <div id="all_articles">
+    <div id="newsroom">
         <div class="wrapper">
             <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <div class="section_title_line"></div>
             <ul>
                 <?php
                 //@TODO: turn into slider
