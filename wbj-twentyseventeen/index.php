@@ -142,7 +142,7 @@ get_header();
     <div id="newsroom">
         <div class="wrapper">
             <h2 class="section_title">Our Newsroom</h2>
-            <div class="section_title_line"></div>
+            <div class="section_title_line blue"></div>
             <ul class="newsroom_block"><!--@TODO;move into function-->
                 <h2>Headline Title</h2>
                 <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
