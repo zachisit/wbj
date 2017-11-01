@@ -143,86 +143,10 @@ get_header();
         <div class="wrapper">
             <h2 class="section_title">Our Newsroom</h2>
             <div class="section_title_line blue"></div>
-            <ul class="newsroom_block"><!--@TODO;move into function-->
-                <h2>Headline Title</h2>
-                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
-                <?php
-                $query = new WP_Query( [
-                    'post_type' => 'post',
-                    'posts_per_page' => 6,
-                    'orderby'   => 'rand',
-                ] );
-
-                if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <li>
-                            <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
-                    <?php endwhile; wp_reset_query();
-                else :
-                    echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
-                endif ?>
-                        </li>
-            </ul>
-            <ul class="newsroom_block"><!--@TODO;move into function-->
-                <h2>Headline Title</h2>
-                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
-                <?php
-                $query = new WP_Query( [
-                    'post_type' => 'post',
-                    'posts_per_page' => 6,
-                    'orderby' => 'post_date',
-                ] );
-
-                if ( $query->have_posts() ) :
-                while ( $query->have_posts() ) : $query->the_post(); ?>
-                <li>
-                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
-                    <?php endwhile; wp_reset_query();
-                    else :
-                        echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
-                    endif ?>
-                </li>
-            </ul>
-            <ul class="newsroom_block"><!--@TODO;move into function-->
-                <h2>Headline Title</h2>
-                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
-                <?php
-                $query = new WP_Query( [
-                    'post_type' => 'post',
-                    'posts_per_page' => 6,
-                    'orderby' => 'post_date',
-                ] );
-
-                if ( $query->have_posts() ) :
-                while ( $query->have_posts() ) : $query->the_post(); ?>
-                <li>
-                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
-                    <?php endwhile; wp_reset_query();
-                    else :
-                        echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
-                    endif ?>
-                </li>
-            </ul>
-            <ul class="newsroom_block"><!--@TODO;move into function-->
-                <h2>Headline Title</h2>
-                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
-                <?php
-                $query = new WP_Query( [
-                    'post_type' => 'post',
-                    'posts_per_page' => 6,
-                    'orderby' => 'post_date',
-                ] );
-
-                if ( $query->have_posts() ) :
-                while ( $query->have_posts() ) : $query->the_post(); ?>
-                <li>
-                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
-                    <?php endwhile; wp_reset_query();
-                    else :
-                        echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
-                    endif ?>
-                </li>
-            </ul>
+            <?php newsroom_block('Featured Article', 'https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg')?>
+            <?php newsroom_block('Fold Articles', 'https://whistleblowerjustice.org/wp-content/uploads/2017/10/business-q-c-640-480-1.jpg')?>
+            <?php newsroom_block('Latest News', 'https://whistleblowerjustice.org/wp-content/uploads/2017/04/f25b6a50-38ba-41ca-9020-3640e708a90f-large.jpeg')?>
+            <?php newsroom_block('Video Article', 'https://whistleblowerjustice.org/wp-content/uploads/2017/10/about.jpg')?>
         </div>
     </div>
 </main>

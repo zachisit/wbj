@@ -132,10 +132,11 @@ $medium_desktop_size:"only screen and (min-width:881px) and (max-width:1300px)";
       }
 
       .title {
-        min-height:80px;
-        margin:1em 0;
-        max-height:80px;
+        min-height:40px;
+        margin:1em 0 1.5em 0;
+        max-height:40px;
         text-align:center;
+        overflow:hidden;
 
         a {
           color:$brand_color_white;

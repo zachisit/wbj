@@ -255,3 +255,30 @@ function return_random_articles() {
         wp_reset_query();
         endif;
 }
+
+function newsroom_block($category, $image) {
+    //@TODO: if continue to use this and not turn into shortcode; then set defaults for image and category
+    //@TODO:move into template
+    ?>
+    <ul class="newsroom_block">
+                <h2>Headline Title</h2>
+                <img src="<?=$image?>">
+                <?php
+                $query = new WP_Query( [
+                    'post_type' => 'post',
+                    'posts_per_page' => 5,
+                    'category_name' => $category,
+                    'orderby' => 'post_date',
+                ] );
+
+                if ( $query->have_posts() ) :
+                while ( $query->have_posts() ) : $query->the_post(); ?>
+<li>
+    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+    <?php endwhile; wp_reset_query();
+    else :
+        echo "<center>Sorry. But I do not see any posts in the $category category</center>";
+    endif ?>
+</li>
+</ul>
+<?php }
