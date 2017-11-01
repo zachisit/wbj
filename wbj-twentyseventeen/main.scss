@@ -82,17 +82,17 @@ $medium_desktop_size:"only screen and (min-width:881px) and (max-width:1300px)";
         &:hover {
           opacity:0.6;
           transition:all 0.7s ease;
-          -moz-transform:scale(1.1);
-          -webkit-transform:scale(1.1);
-          transform:scale(1.1);
+          -moz-transform:scale(1.04);
+          -webkit-transform:scale(1.04);
+          transform:scale(1.04);
         }
       }
 
       a {
-        color:$brand_color_red;
+        color:$brand_color_white;
         text-decoration:none;
         font-weight:600;
-        font-size:1.1em;//@TODO:move these a links for list item articles on hompage into class
+        font-size:1.1em;
       }
 
       &:nth-child(2), &:nth-child(5) {
@@ -587,51 +587,7 @@ body {
       background:$brand_color_red;
       padding:3em 0;
 
-      ul {//@TODO:into @include homepage-article-block-list-layout; but change a link color with var
-        @include ul-type-none;
-
-        li {
-          width:30%;
-          margin:0 4em 0 0;
-          float:left;
-
-          img {
-            width:100%;
-            height:auto;
-
-            &:hover {
-              opacity:0.6;
-              transition:all 0.7s ease;
-              -moz-transform:scale(1.1);
-              -webkit-transform:scale(1.1);
-              transform:scale(1.1);
-            }
-          }
-
-          a {
-            color:$brand_color_white;
-            text-decoration:none;
-            font-weight:600;
-            font-size:1.1em;
-          }
-
-          &:nth-child(2), &:nth-child(5) {
-            margin:0;
-          }
-
-          &:nth-child(3), &:nth-child(6) {
-            margin:0;
-            float:right;
-          }
-
-          .title {
-            min-height:80px;
-            margin:1em 0;
-            max-height:80px;
-            text-align:center;
-          }
-        }
-      }
+      @include homepage-article-block-list-layout;
     }
 
     #video_articles {
