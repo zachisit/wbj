@@ -34,12 +34,12 @@ WhistleBlowerJustice Wordpress Theme
 * Theme utilizing preloading of any files placed inside the theme/images/preload directory. Refer to file documentation on safe-use.
 
 ## WordPress Version
-* At time of last update, this theme was built and tested with WordPress version [WORDPRESS-VERSION-NUMBER]
+* At time of last update, this theme was built and tested with WordPress version 4.8.3
 
 ## Coding Styles
 * You will find most of the theme's functionality broken up into directories (i.e., custom post types, shortcodes, templates, etc), loosely mimicking a MVC structure.
 * CSS and method declarations will use a title_under_score naming convention
-* Function method brackets will start on next line
+* Function method brackets will start on same line
 
 ## Base Theme History
-This WordPress theme is forked from a bare-bones base theme created by Zach Smith called [tater](https://github.com/zachisit/tater-wordpress-theme), with base theme version number 1.1.3. This theme does not utlilize a parent-child theme structure. The perferred editor is PHPStorm, hence the existing .gitigore rule(s).
+This WordPress theme is forked from a bare-bones base theme created by Zach Smith called [tater](https://github.com/zachisit/tater-wordpress-theme), with base theme version number 1.1.4. This theme does not utilize a parent-child theme structure. The preferred editor is PHPStorm, hence the existing .gitigore rule(s).

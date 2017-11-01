@@ -27,7 +27,7 @@ get_header();
                             <li>
                                 <?=get_the_post_thumbnail() ?>
                                 <div class="text_box">
-                                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a><div class="category">Lorem Ipsum</div></div>
                                 </div>
                             </li>
                         <?php endwhile; wp_reset_query();

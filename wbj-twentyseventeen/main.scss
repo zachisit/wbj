@@ -63,6 +63,56 @@ $medium_desktop_size:"only screen and (min-width:881px) and (max-width:1300px)";
     height:auto;
   }
 }
+@mixin ul-type-none {
+  list-style-type:none;
+}
+@mixin homepage-article-block-list-layout {
+  ul {
+    @include ul-type-none;
+
+    li {
+      width:30%;
+      margin:0 4em 0 0;
+      float:left;
+
+      img {
+        width:100%;
+        height:auto;
+
+        &:hover {
+          opacity:0.6;
+          transition:all 0.7s ease;
+          -moz-transform:scale(1.1);
+          -webkit-transform:scale(1.1);
+          transform:scale(1.1);
+        }
+      }
+
+      a {
+        color:$brand_color_red;
+        text-decoration:none;
+        font-weight:600;
+        font-size:1.1em;//@TODO:move these a links for list item articles on hompage into class
+      }
+
+      &:nth-child(2), &:nth-child(5) {
+        margin:0;
+      }
+
+      &:nth-child(3), &:nth-child(6) {
+        margin:0;
+        float:right;
+      }
+
+      .title {
+        min-height:80px;
+        margin:1em 0;
+        max-height:80px;
+        text-align:center;
+      }
+    }
+  }
+}
 
 /*--------------------------------------------------------------
 # Normalize
@@ -235,7 +285,7 @@ body {
 
     .menu {
       float:left;
-      list-style-type:none;
+      @include ul-type-none;
 
       li {
         display:inline;
@@ -299,7 +349,7 @@ body {
       color:white;
 
       ul {
-        list-style-type:none;
+        @include ul-type-none;
 
         li {
           display:inline-block;
@@ -345,9 +395,14 @@ body {
                 a {
                   font-size:1.5em;
                   color:$brand_color_white;
-                  line-height:1.7em;
+                  line-height:1.5em;
                   font-weight:500;
                 }
+              }
+
+              .category {
+                color:$text_gray;
+                font-weight:700;
               }
             }
 
@@ -404,7 +459,7 @@ body {
         }
 
         ul {
-          list-style-type:none;
+          @include ul-type-none;
           margin:0 2em 0 1.5em;
 
           li {
@@ -434,48 +489,7 @@ body {
       width:100%;
       float:left;
 
-      ul {//@TODO:move to possible mixin if same style used
-        list-style-type:none;
-
-        li {
-          width:30%;
-          margin:0 4em 0 0;
-          float:left;
-
-          img {
-            width:100%;
-            height:auto;
-
-            &:hover {
-              opacity:0.6;
-              transition:opacity 0.7s ease;
-            }
-          }
-
-          a {
-            color:$brand_color_red;
-            text-decoration:none;
-            font-weight:600;
-            font-size:1.1em;//@TODO:move these a links for list item articles on hompage into class
-          }
-
-          &:nth-child(2), &:nth-child(5) {
-            margin:0;
-          }
-
-          &:nth-child(3), &:nth-child(6) {
-            margin:0;
-            float:right;
-          }
-
-          .title {
-            min-height:80px;
-            margin:0 0 1em 0;
-            max-height:80px;
-            text-align:center;
-          }
-        }
-      }
+      @include homepage-article-block-list-layout;
     }
 
     #mission {
@@ -514,8 +528,8 @@ body {
       background:$brand_color_red;
       padding:3em 0;
 
-      ul {//@TODO:move to possible mixin if same style used
-        list-style-type:none;
+      ul {//@TODO:into @include homepage-article-block-list-layout; but change a link color with var
+        @include ul-type-none;
 
         li {
           width:30%;
@@ -564,43 +578,7 @@ body {
       width:100%;
       margin:3em 0;
 
-      ul {//@TODO:move to possible mixin if same style used
-        list-style-type:none;
-
-        li {
-          width:30%;
-          margin:0 4em 0 0;
-          float:left;
-
-          img {
-            width:100%;
-            height:auto;
-          }
-
-          a {
-            color:$brand_color_red;
-            text-decoration:none;
-            font-size:1.1em;
-            font-weight:600;
-          }
-
-          &:nth-child(2) {
-            margin:0;
-          }
-
-          &:nth-child(3) {
-            margin:0;
-            float:right;
-          }
-
-          .title {
-            min-height:80px;
-            margin:0 0 1em 0;
-            max-height:80px;
-            text-align:center;
-          }
-        }
-      }
+      @include homepage-article-block-list-layout;
     }
 
     #all_articles {
@@ -614,7 +592,7 @@ body {
       }
 
       ul {
-        list-style-type:none;//@TODO:move these into mixin
+        @include ul-type-none;
 
         li {
           margin:0 0 2em 0;
@@ -686,7 +664,7 @@ body {
       }
 
       ul {
-        list-style-type:none;
+        @include ul-type-none;
         margin:0;
 
         li {
@@ -754,7 +732,7 @@ body {
 
       ul {
         margin:0.5em;
-        list-style-type:none;
+        @include ul-type-none;
 
         li {
           padding:0 0 0.9em 0;
@@ -843,7 +821,7 @@ body {
 
     #logo {
       margin:1em auto;
-      width:330px;
+      width:400px;
     }
 
     #main {
@@ -867,7 +845,7 @@ body {
         color:white;
 
         ul {
-          list-style-type:none;
+          @include ul-type-none;
 
           li {
             display:inline-block;
@@ -886,7 +864,7 @@ body {
 
         input {
           border:none;
-          text-align:center;
+          text-align:left;
           font-size:1em;
           width:100%;
           margin:0 0 0.54em 0;
@@ -912,7 +890,7 @@ body {
         float:right;
 
         ul {
-          list-style-type:none;
+          @include ul-type-none;
 
           li {
             margin:0 0 0.5em 0;

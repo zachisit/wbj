@@ -247,8 +247,11 @@ body {
           body main #intro #featured_articles #featured_article_slider li .text_box .title a {
             font-size: 1.5em;
             color: #FFFFFF;
-            line-height: 1.7em;
+            line-height: 1.5em;
             font-weight: 500; }
+          body main #intro #featured_articles #featured_article_slider li .text_box .category {
+            color: #333;
+            font-weight: 700; }
         body main #intro #featured_articles #featured_article_slider li img {
           width: 100%;
           height: auto; }
@@ -314,7 +317,10 @@ body {
           height: auto; }
           body main #fold_articles ul li img:hover {
             opacity: 0.6;
-            transition: opacity 0.7s ease; }
+            transition: all 0.7s ease;
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
         body main #fold_articles ul li a {
           color: #D14431;
           text-decoration: none;
@@ -327,7 +333,7 @@ body {
           float: right; }
         body main #fold_articles ul li .title {
           min-height: 80px;
-          margin: 0 0 1em 0;
+          margin: 1em 0;
           max-height: 80px;
           text-align: center; }
   body main #mission {
@@ -396,19 +402,25 @@ body {
         body main #video_articles ul li img {
           width: 100%;
           height: auto; }
+          body main #video_articles ul li img:hover {
+            opacity: 0.6;
+            transition: all 0.7s ease;
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
         body main #video_articles ul li a {
           color: #D14431;
           text-decoration: none;
-          font-size: 1.1em;
-          font-weight: 600; }
-        body main #video_articles ul li:nth-child(2) {
+          font-weight: 600;
+          font-size: 1.1em; }
+        body main #video_articles ul li:nth-child(2), body main #video_articles ul li:nth-child(5) {
           margin: 0; }
-        body main #video_articles ul li:nth-child(3) {
+        body main #video_articles ul li:nth-child(3), body main #video_articles ul li:nth-child(6) {
           margin: 0;
           float: right; }
         body main #video_articles ul li .title {
           min-height: 80px;
-          margin: 0 0 1em 0;
+          margin: 1em 0;
           max-height: 80px;
           text-align: center; }
   body main #all_articles {
@@ -566,7 +578,7 @@ body {
     --------------------------------------------------------------*/ }
     body footer #logo {
       margin: 1em auto;
-      width: 330px; }
+      width: 400px; }
     body footer #main {
       float: left;
       width: 100%;
@@ -593,7 +605,7 @@ body {
         float: left; }
         body footer #main #newsletter input {
           border: none;
-          text-align: center;
+          text-align: left;
           font-size: 1em;
           width: 100%;
           margin: 0 0 0.54em 0;
