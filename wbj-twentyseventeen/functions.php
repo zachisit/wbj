@@ -5,7 +5,8 @@
  * @package whistle-blower-justice
  */
 
-require_once "shortcodes/sitemap.php";
+require_once 'shortcodes/sitemap.php';
+require_once 'meta_boxes/page_banner_image.php';
 
 /**
  * Widgetize Theme
