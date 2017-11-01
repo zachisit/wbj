@@ -894,6 +894,7 @@ body {
         color:white;
         margin:0 0 0.5em 0;
         padding:0;
+        text-align:center;
       }
 
       #contact {
@@ -904,7 +905,8 @@ body {
         #call {
           font-size:1.4em;
           font-weight:700;
-          margin:1em 0 2em 2.2em;
+          margin:2.7em 0 0 2.2em;
+          padding:0;
 
           &:before {
              content:"\f098";
@@ -940,6 +942,7 @@ body {
           color:white;
           display:table;
           cursor:pointer;
+          margin:1.8em auto 0 auto;
 
           &:hover {
             background:$brand_color_red;

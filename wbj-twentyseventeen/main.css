@@ -714,7 +714,8 @@ body {
         font-weight: 400;
         color: white;
         margin: 0 0 0.5em 0;
-        padding: 0; }
+        padding: 0;
+        text-align: center; }
       body footer #main #contact {
         width: 30%;
         float: left;
@@ -722,7 +723,8 @@ body {
         body footer #main #contact #call {
           font-size: 1.4em;
           font-weight: 700;
-          margin: 1em 0 2em 2.2em; }
+          margin: 2.7em 0 0 2.2em;
+          padding: 0; }
           body footer #main #contact #call:before {
             content: "\f098";
             color: #D14431;
@@ -749,7 +751,8 @@ body {
           width: 200px;
           color: white;
           display: table;
-          cursor: pointer; }
+          cursor: pointer;
+          margin: 1.8em auto 0 auto; }
           body footer #main #newsletter #mc-embedded-subscribe:hover {
             background: #D14431; }
       body footer #main #menu {
