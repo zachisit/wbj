@@ -70,8 +70,8 @@ get_header();
                 if ( $query->have_posts() ) :
                     while ( $query->have_posts() ) : $query->the_post(); ?>
                         <li>
-                            <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">
-                                <?=get_the_post_thumbnail() ?>
+                            <div class="asset"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">
+                                <?=get_the_post_thumbnail() ?></div>
                             <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
                             <?php endwhile; wp_reset_query();
                             else :
@@ -103,8 +103,8 @@ get_header();
                 if ( $query->have_posts() ) :
                     while ( $query->have_posts() ) : $query->the_post(); ?>
                 <li>
-                    <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">
-                        <?=get_the_post_thumbnail() ?>
+                    <div class="asset"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">
+                            <?=get_the_post_thumbnail() ?></div>
                         <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
                         <?php endwhile; wp_reset_query();
                         else :
@@ -129,7 +129,7 @@ get_header();
                 if ( $query->have_posts() ) :
                     while ( $query->have_posts() ) : $query->the_post(); ?>
                 <li>
-                    <a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_post_thumbnail() ?>
+                    <div class="asset"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_post_thumbnail() ?><div class="video_overlay"></div></div>
                     <div class="title"><?=get_the_title()?></a></div>
                 <?php endwhile; wp_reset_query();
                 else :
