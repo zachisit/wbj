@@ -334,6 +334,8 @@ body {
           body main #intro #latest_articles ul li a {
             color: #4B596A;
             text-decoration: none; }
+            body main #intro #latest_articles ul li a:hover {
+              color: #D14431; }
           body main #intro #latest_articles ul li:last-child {
             border-bottom: none; }
   body main #fold_articles {

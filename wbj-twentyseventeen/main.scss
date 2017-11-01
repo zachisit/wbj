@@ -518,6 +518,10 @@ body {
             a {
               color:$brand_color_gray;
               text-decoration:none;
+
+              &:hover {
+                color:$brand_color_red;
+              }
             }
             
             &:last-child {
