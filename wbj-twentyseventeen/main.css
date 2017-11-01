@@ -548,31 +548,35 @@ body {
     background: #FFFFFF; }
     body main #newsroom .section_title {
       color: #D14431; }
-    body main #newsroom ul {
-      list-style-type: none; }
-      body main #newsroom ul li {
-        margin: 0 0 2em 0;
-        border-bottom: 0.2em dotted #11396B;
-        padding: 0 0 0.85em 0;
-          /*@TODO: implement cross browser transitions
-          -moz-transition:color 500ms ease;
-                -webkit-transition:color 500ms ease;
-                -o-transition:color 500ms ease;
-                -ms-transition:color 500ms ease;
-
-           */ }
-        body main #newsroom ul li .title {
-          margin: 0 0 1em 0; }
-          body main #newsroom ul li .title a {
-            color: #11396B;
-            font-weight: 500;
-            font-size: 1.3em; }
-        body main #newsroom ul li .excerpt {
-          font-size: 1em;
-          line-height: 1.3em;
-          color: #333; }
-        body main #newsroom ul li:last-child {
+    body main #newsroom .newsroom_block {
+      width: 23%;
+      float: left;
+      margin: 0 2em 0 0; }
+      body main #newsroom .newsroom_block h2 {
+        background: #4B596A;
+        text-align: center;
+        padding: 0.5em 0;
+        margin: 0;
+        color: white;
+        font-weight: 100; }
+      body main #newsroom .newsroom_block img {
+        height: auto;
+        width: 100%;
+        margin: 0 0 0.5em 0; }
+      body main #newsroom .newsroom_block li {
+        display: inline-block;
+        margin: 0 0 0.5em 0;
+        padding: 0 0 0.5em 0;
+        border-bottom: 0.2em dotted #9CA4AD; }
+        body main #newsroom .newsroom_block li a {
+          color: #4B596A; }
+          body main #newsroom .newsroom_block li a:hover {
+            color: #D14431;
+            transition: color 800ms ease; }
+        body main #newsroom .newsroom_block li:last-child {
           border-bottom: none; }
+      body main #newsroom .newsroom_block:last-child {
+        margin: 0; }
   body #content {
     width: 67%;
     float: left;

@@ -91,7 +91,7 @@ get_header();
     </div>
     <div id="rand_articles">
         <div class="wrapper">
-            <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <h2 class="section_title">Industry Focused Articles</h2>
             <div class="section_title_line"></div>
             <ul>
                 <?php $query = new WP_Query( [
@@ -117,7 +117,7 @@ get_header();
     </div>
     <div id="video_articles">
         <div class="wrapper">
-            <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <h2 class="section_title">Popular Video Articles</h2>
             <div class="section_title_line"></div>
             <ul>
                 <?php $query = new WP_Query( [
@@ -141,11 +141,32 @@ get_header();
     </div>
     <div id="newsroom">
         <div class="wrapper">
-            <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <h2 class="section_title">Our Newsroom</h2>
             <div class="section_title_line"></div>
-            <ul>
+            <ul class="newsroom_block"><!--@TODO;move into function-->
+                <h2>Headline Title</h2>
+                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
                 <?php
-                //@TODO: turn into slider
+                $query = new WP_Query( [
+                    'post_type' => 'post',
+                    'posts_per_page' => 6,
+                    'orderby'   => 'rand',
+                ] );
+
+                if ( $query->have_posts() ) :
+                    while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <li>
+                            <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                    <?php endwhile; wp_reset_query();
+                else :
+                    echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
+                endif ?>
+                        </li>
+            </ul>
+            <ul class="newsroom_block"><!--@TODO;move into function-->
+                <h2>Headline Title</h2>
+                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
+                <?php
                 $query = new WP_Query( [
                     'post_type' => 'post',
                     'posts_per_page' => 6,
@@ -153,16 +174,54 @@ get_header();
                 ] );
 
                 if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <li>
-                            <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
-                            <div class="excerpt"><?=wp_trim_words( get_the_content(), 100, '...' );?></div>
-                            <a class="caret" href="<?=get_the_permalink()?>" title="<?=get_the_title()?>">read more</a>
+                while ( $query->have_posts() ) : $query->the_post(); ?>
+                <li>
+                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
                     <?php endwhile; wp_reset_query();
-                else :
-                    echo "<center>Sorry. But I do not see any posts in the 'Video Article' category</center>";
-                endif ?>
-                        </li>
+                    else :
+                        echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
+                    endif ?>
+                </li>
+            </ul>
+            <ul class="newsroom_block"><!--@TODO;move into function-->
+                <h2>Headline Title</h2>
+                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
+                <?php
+                $query = new WP_Query( [
+                    'post_type' => 'post',
+                    'posts_per_page' => 6,
+                    'orderby' => 'post_date',
+                ] );
+
+                if ( $query->have_posts() ) :
+                while ( $query->have_posts() ) : $query->the_post(); ?>
+                <li>
+                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                    <?php endwhile; wp_reset_query();
+                    else :
+                        echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
+                    endif ?>
+                </li>
+            </ul>
+            <ul class="newsroom_block"><!--@TODO;move into function-->
+                <h2>Headline Title</h2>
+                <img src="https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg">
+                <?php
+                $query = new WP_Query( [
+                    'post_type' => 'post',
+                    'posts_per_page' => 6,
+                    'orderby' => 'post_date',
+                ] );
+
+                if ( $query->have_posts() ) :
+                while ( $query->have_posts() ) : $query->the_post(); ?>
+                <li>
+                    <div class="title"><a href="<?=get_the_permalink()?>" title="<?=get_the_title()?>"><?=get_the_title()?></a></div>
+                    <?php endwhile; wp_reset_query();
+                    else :
+                        echo "<center>Sorry. But I do not see any posts in the '@TODO: PIPE IN CATEGORY' category</center>";
+                    endif ?>
+                </li>
             </ul>
         </div>
     </div>

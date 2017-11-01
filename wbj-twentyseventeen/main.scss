@@ -642,40 +642,48 @@ body {
         color:$brand_color_red;
       }
 
-      ul {
-        @include ul-type-none;
+      .newsroom_block {
+        width:23%;
+        float:left;
+        margin:0 2em 0 0;
+
+        h2 {
+          background:$brand_color_gray;
+          text-align:center;
+          padding:0.5em 0;
+          margin:0;
+          color:white;
+          font-weight:100;
+        }
+
+        img {//@TODO:this should be mixin
+          height:auto;
+          width:100%;
+          margin:0 0 0.5em 0;
+        }
 
         li {
-          margin:0 0 2em 0;
-          border-bottom:0.2em dotted $brand_color_blue;
-          padding:0 0 0.85em 0;
+          display:inline-block;
+          margin:0 0 0.5em 0;
+          padding:0 0 0.5em 0;
+          border-bottom:0.2em dotted $brand_color_light_gray;
 
-          /*@TODO: implement cross browser transitions
-          -moz-transition:color 500ms ease;
-                -webkit-transition:color 500ms ease;
-                -o-transition:color 500ms ease;
-                -ms-transition:color 500ms ease;
+          a {
+            color:$brand_color_gray;
 
-           */
-          .title {
-            margin:0 0 1em 0;
-
-            a {
-              color:$brand_color_blue;
-              font-weight:500;
-              font-size:1.3em;
+            &:hover {
+              color:$brand_color_red;
+              transition:color 800ms ease;
             }
-          }
-
-          .excerpt {
-            font-size:1em;
-            line-height:1.3em;
-            color:$text_gray;
           }
 
           &:last-child {
             border-bottom:none;
           }
+        }
+
+        &:last-child {
+          margin:0;//@TODO:should be mixin
         }
       }
     }
