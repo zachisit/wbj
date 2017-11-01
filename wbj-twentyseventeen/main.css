@@ -629,7 +629,8 @@ body {
       body footer #main .footer_title {
         font-weight: 400;
         color: white;
-        margin: 0 0 0.5em 0; }
+        margin: 0 0 0.5em 0;
+        padding: 0; }
       body footer #main #contact {
         width: 30%;
         float: left;
@@ -645,15 +646,6 @@ body {
             padding: 0;
             font-size: 1em;
             margin: 0 0.5em 0 0; }
-        body footer #main #contact ul {
-          list-style-type: none;
-          margin: 0 0 0 6em; }
-          body footer #main #contact ul li {
-            display: inline-block;
-            margin: 0 0.5em 0 0; }
-            body footer #main #contact ul li a {
-              color: white;
-              font-size: 1em; }
       body footer #main #newsletter {
         width: 30%;
         margin: 0 0 0 7em;
@@ -686,6 +678,15 @@ body {
             body footer #main #menu ul li a {
               color: white;
               text-transform: uppercase; }
+        body footer #main #menu #social {
+          list-style-type: none;
+          margin: 1em 0 0 0; }
+          body footer #main #menu #social li {
+            display: inline-block;
+            margin: 0 0.5em 0 0; }
+            body footer #main #menu #social li a {
+              font-size: 1.3em;
+              color: #D14431; }
     body footer #bottom {
       background: #9CA4AD;
       padding: 1em 0;

@@ -887,6 +887,7 @@ body {
         font-weight:400;
         color:white;
         margin:0 0 0.5em 0;
+        padding:0;
       }
 
       #contact {
@@ -907,21 +908,6 @@ body {
              font-size:1em;
              margin:0 0.5em 0 0;
            }
-        }
-
-        ul {
-          @include ul-type-none;
-          margin:0 0 0 6em;
-
-          li {
-            display:inline-block;
-            margin:0 0.5em 0 0;
-
-            a {
-              color:white;
-              font-size:1em;
-            }
-          }
         }
       }
 
@@ -968,6 +954,21 @@ body {
             a {
               color:white;
               text-transform:uppercase;
+            }
+          }
+        }
+
+        #social {
+          @include ul-type-none;
+          margin:1em 0 0 0;
+
+          li {
+            display:inline-block;
+            margin:0 0.5em 0 0;
+
+            a {
+              font-size:1.3em;
+              color:$brand_color_red;
             }
           }
         }

@@ -8,11 +8,6 @@
             <div id="contact">
                 <a href="<?php echo get_home_url(); ?>" title="Home"><img src="<?php echo get_template_directory_uri(); ?>/images/preload/logo_new.png" alt="<?php echo get_bloginfo( 'name' ); ?> - Home" /></a>
                 <p id="call">844-WJN-4ALL</p>
-                <ul>
-                    <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                </ul>
             </div>
             <div id="newsletter">
                 <h3 class="footer_title">Newsletter Signup</h3>
@@ -38,6 +33,11 @@
             </div>
             <div id="menu">
                 <?php wp_nav_menu( [ 'theme_location' => 'footer_menu' ] ); ?>
+                <ul id="social">
+                    <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="" title="<?= get_bloginfo( 'name' ); ?> - Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
