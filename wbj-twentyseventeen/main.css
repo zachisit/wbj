@@ -354,7 +354,8 @@ body {
         float: left; }
         body main #fold_articles ul li img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          transition: all 0.7s ease; }
           body main #fold_articles ul li img:hover {
             opacity: 0.6;
             transition: all 0.7s ease;
@@ -413,7 +414,8 @@ body {
         float: left; }
         body main #rand_articles ul li img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          transition: all 0.7s ease; }
           body main #rand_articles ul li img:hover {
             opacity: 0.6;
             transition: all 0.7s ease;
@@ -447,7 +449,8 @@ body {
         float: left; }
         body main #video_articles ul li img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          transition: all 0.7s ease; }
           body main #video_articles ul li img:hover {
             opacity: 0.6;
             transition: all 0.7s ease;
