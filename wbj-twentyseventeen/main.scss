@@ -357,8 +357,15 @@ body {
       font-size:2.3em;
       text-align:center;
       font-weight:100;
-      margin:0 0 1em 0;
+      margin:0 0 0.4em 0;
       color:$brand_color_white;
+    }
+
+    .section_title_line {
+      background:$brand_color_white;
+      width:133px;
+      height:0.3em;
+      margin:0.5em auto 4em auto;
     }
 
     #article_banner {

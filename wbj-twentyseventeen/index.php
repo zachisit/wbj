@@ -59,6 +59,7 @@ get_header();
     <div id="fold_articles">
         <div class="wrapper">
             <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <div class="section_title_line"></div>
             <ul>
                 <?php $query = new WP_Query( [
                     'post_type' => 'post',
@@ -91,6 +92,7 @@ get_header();
     <div id="rand_articles">
         <div class="wrapper">
             <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <div class="section_title_line"></div>
             <ul>
                 <?php $query = new WP_Query( [
                     'post_type' => 'post',
@@ -116,6 +118,7 @@ get_header();
     <div id="video_articles">
         <div class="wrapper">
             <h2 class="section_title">Et harum quidem rerum facilis</h2>
+            <div class="section_title_line"></div>
             <ul>
                 <?php $query = new WP_Query( [
                     'post_type' => 'post',
