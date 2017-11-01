@@ -646,49 +646,45 @@ body {
       .section_title {
         color:$brand_color_red;
       }
+    }
 
-      .newsroom_block {
-        width:23%;
-        float:left;
-        margin:0 2em 0 0;
+    .newsroom_block {
+      width:23%;
+      float:left;
+      margin:0 1.4em 0 0 !important;//@TODO:remove; used to over ride content ul. chnge out o proper css usage here. maybe not us ul, etc for newseroom
 
-        h2 {
-          background:$brand_color_gray;
-          text-align:center;
-          padding:0.5em 0;
-          margin:0;
-          color:white;
-          font-weight:100;
-        }
+      h2 {
+        background:$brand_color_gray;
+        text-align:center;
+        padding:0.5em 0;
+        margin:0;
+        color:white;
+        font-weight:100;
+      }
 
-        img {//@TODO:this should be mixin
-          height:auto;
-          width:100%;
-          margin:0 0 0.5em 0;
-        }
+      img {//@TODO:this should be mixin
+        height:auto;
+        width:100%;
+        margin:0 0 0.5em 0;
+      }
 
-        li {
-          display:inline-block;
-          margin:0 0 0.5em 0;
-          padding:0 0 0.5em 0;
-          border-bottom:0.2em dotted $brand_color_light_gray;
+      li {
+        display:inline-block;
+        margin:0 0 0.5em 0;
+        padding:0 0 0.5em 0;
+        border-bottom:0.2em dotted $brand_color_light_gray;
 
-          a {
-            color:$brand_color_gray;
+        a {
+          color:$brand_color_gray;
 
-            &:hover {
-              color:$brand_color_red;
-              transition:color 800ms ease;
-            }
-          }
-
-          &:last-child {
-            border-bottom:none;
+          &:hover {
+            color:$brand_color_red;
+            transition:color 800ms ease;
           }
         }
 
         &:last-child {
-          margin:0;//@TODO:should be mixin
+          border-bottom:none;
         }
       }
     }

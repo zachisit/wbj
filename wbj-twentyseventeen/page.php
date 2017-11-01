@@ -21,7 +21,27 @@ get_header(); ?>
         <div class="wrapper internal">
             <div id="content">
                 <h1 id="page_title"><?=the_title()?></h1>
-                <?=the_content();
+                <?php
+                /*
+                 * TODO:this will be removed and replaced
+                 * by shortcodes
+                 * used to get by for tomorrow's meeting
+                 */
+                if (is_page('newsroom')) {
+                    newsroom_block('Featured Article', 'https://whistleblowerjustice.org/wp-content/uploads/2017/03/1-146542373.jpg');
+            newsroom_block('Fold Articles', 'https://whistleblowerjustice.org/wp-content/uploads/2017/10/business-q-c-640-480-1.jpg');
+            newsroom_block('Latest News', 'https://whistleblowerjustice.org/wp-content/uploads/2017/04/f25b6a50-38ba-41ca-9020-3640e708a90f-large.jpeg');
+            newsroom_block('Video Article', 'https://whistleblowerjustice.org/wp-content/uploads/2017/10/about.jpg');
+            ?>
+                    <!--@TODO:removed when we implement
+                    show/hide sidebar-->
+                    <style>
+                    #sidebar, #page_title {display:none;}
+                        #content {width:97% !important;}
+                    </style>
+                <?php } else {
+                    the_content();
+                }
                 endwhile; ?>
             </div>
             <?php get_sidebar(); ?>
