@@ -393,9 +393,9 @@ body {
           margin: 0;
           float: right; }
         body main #fold_articles ul li .title {
-          min-height: 40px;
+          min-height: 47px;
           margin: 1em 0 1.5em 0;
-          max-height: 40px;
+          max-height: 47px;
           text-align: center;
           overflow: hidden; }
           body main #fold_articles ul li .title a {
@@ -477,9 +477,9 @@ body {
           margin: 0;
           float: right; }
         body main #rand_articles ul li .title {
-          min-height: 40px;
+          min-height: 47px;
           margin: 1em 0 1.5em 0;
-          max-height: 40px;
+          max-height: 47px;
           text-align: center;
           overflow: hidden; }
           body main #rand_articles ul li .title a {
@@ -536,9 +536,9 @@ body {
           margin: 0;
           float: right; }
         body main #video_articles ul li .title {
-          min-height: 40px;
+          min-height: 47px;
           margin: 1em 0 1.5em 0;
-          max-height: 40px;
+          max-height: 47px;
           text-align: center;
           overflow: hidden; }
           body main #video_articles ul li .title a {
